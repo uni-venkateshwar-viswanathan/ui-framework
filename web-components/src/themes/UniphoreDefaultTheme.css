@@ -1,0 +1,14 @@
+@import '../assets/fonts/Poppins/poppins-fonts.css';
+
+:root {
+    --true-blue-color: #0062D6;
+    --active-blue-color: #004EAB;
+    --pale-grey-color: #D7DAE3;
+    --cool-grey-color: #8B8BA0;
+    --primary-hover-blue-background-color: #3381DE;
+    --secondary-hover-blue-background-color: #AFD5FF;
+    --secondary-active-blue-background-color: #99C0EF;
+    --poppins-semi-bold: Poppins-SemiBold;
+    --poppins-regular: Poppins-Regular;
+    --border-grey-color: #E4E7ED;
+}
