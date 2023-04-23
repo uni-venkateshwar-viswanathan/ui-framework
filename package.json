@@ -7,6 +7,7 @@
   "type": "module",
   "license": "ISC",
   "scripts": {
+    "husky:prepare": "husky install",
     "testR": "web-test-runner test/**/*.test.js --node-resolve",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "start": "web-dev-server --open demo/ --node-resolve",
@@ -57,7 +58,8 @@
     "@web/dev-server-legacy": "^1.0.1",
     "@web/test-runner": "^0.15.0",
     "chai": "^4.3.7",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "husky": "^8.0.3"
   },
   "engines": {
     "node": ">=14.17.3"
