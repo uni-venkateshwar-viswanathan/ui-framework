@@ -1,5 +1,5 @@
 import '../../src/components/label/uniphore-label';
-import {expect, jest, test} from '@jest/globals';
+import { expect, jest, test } from '@jest/globals';
 import { fireEvent } from '@testing-library/dom';
 
 describe('uniphore-label web-component tests', () => {
@@ -82,7 +82,6 @@ describe('uniphore-label web-component tests', () => {
     await element.updateComplete;
 
     labelElement = shadowRoot.querySelector('span');
-
 
     const titleAttrAfterMouseEnter = labelElement.getAttribute('title');
     expect(titleAttrAfterMouseEnter).not.toBeNull();

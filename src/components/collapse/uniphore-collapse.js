@@ -104,10 +104,12 @@ export class UniphoreCollapse extends LitElement {
       : null;
   }
 
-  expandElement(){
-    if (this.isCollapsed){
+  expandElement() {
+    if (this.isCollapsed) {
       this.isCollapsed = false;
-      const target = this.shadowRoot.getElementById('uniphore-collapse-content');
+      const target = this.shadowRoot.getElementById(
+        'uniphore-collapse-content',
+      );
       this._handleContentHeight(target);
     }
   }
