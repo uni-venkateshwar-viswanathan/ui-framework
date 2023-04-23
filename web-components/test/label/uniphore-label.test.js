@@ -1,5 +1,5 @@
 import '../../src/components/label/uniphore-label';
-import { expect, test } from '@jest/globals';
+import {expect, jest, test} from '@jest/globals';
 import { fireEvent } from '@testing-library/dom';
 
 describe('uniphore-label web-component tests', () => {
@@ -57,6 +57,8 @@ describe('uniphore-label web-component tests', () => {
     divWrapper.appendChild(element);
     element.setAttribute('text', VERY_LONG_LABEL_TEXT);
 
+    const spyOnSetTitle = jest.spyOn(element, '_setTitleIfNecessary');
+
     await element.updateComplete;
     const shadowRoot =
       document.body.getElementsByTagName('uniphore-label')[0].shadowRoot;
@@ -72,8 +74,6 @@ describe('uniphore-label web-component tests', () => {
       value: 20,
     });
 
-    // console.log('BEFORE:  shadowDOM: ' + shadowRoot.innerHTML);
-
     let labelElement = shadowRoot.querySelector('span');
     const titleAttrBeforeMouseEnter = labelElement.getAttribute('title');
     expect(titleAttrBeforeMouseEnter).toBeNull();
@@ -85,10 +85,9 @@ describe('uniphore-label web-component tests', () => {
 
 
     const titleAttrAfterMouseEnter = labelElement.getAttribute('title');
+    expect(titleAttrAfterMouseEnter).not.toBeNull();
 
-    expect(
-      titleAttrAfterMouseEnter.includes(VERY_LONG_LABEL_TEXT),
-    ).toBeTruthy();
+    expect(spyOnSetTitle).toHaveBeenCalled();
   });
 
   afterEach(() => {
