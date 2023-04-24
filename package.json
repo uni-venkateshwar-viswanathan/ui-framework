@@ -10,8 +10,6 @@
     "husky:prepare": "husky install",
     "testR": "web-test-runner test/**/*.test.js --node-resolve",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "start": "web-dev-server --open demo/ --node-resolve",
-    "start:watch": "web-dev-server --open demo/ --node-resolve --watch",
     "lint": "eslint **/*.js",
     "lint:fix": "npm run lint -- --fix",
     "prettier:fix": "npx prettier -w **/*.js",
@@ -45,12 +43,11 @@
     "@esm-bundle/chai": "^4.3.4-fix.0",
     "@storybook/addon-essentials": "^7.0.6",
     "@storybook/addon-links": "^7.0.6",
+    "@storybook/addon-mdx-gfm": "^7.0.6",
     "@storybook/blocks": "^7.0.6",
     "@storybook/web-components": "^7.0.6",
     "@storybook/web-components-webpack5": "^7.0.6",
     "@testing-library/dom": "^8.19.1",
-    "@web/dev-server": "0.1.35",
-    "@web/dev-server-legacy": "^1.0.1",
     "@web/test-runner": "^0.15.0",
     "chai": "^4.3.7",
     "eslint": "^8.31.0",
@@ -72,6 +69,6 @@
     "storybook": "^7.0.6"
   },
   "engines": {
-    "node": ">=14.17.3"
+    "node": ">=18.16.0"
   }
 }
