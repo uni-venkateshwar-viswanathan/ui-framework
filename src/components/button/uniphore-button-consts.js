@@ -17,6 +17,3 @@ export const ButtonSize = {
 export const PRIMARY_BUTTON = 'primary';
 export const SECONDARY_BUTTON = 'secondary';
 export const TEXT_BUTTON = 'text';
-export const PRIMARY_BUTTON_CLASS = 'uniphore-primary-button';
-export const SECONDARY_BUTTON_CLASS = 'uniphore-secondary-button';
-export const TEXT_BUTTON_CLASS = 'uniphore-text-button';
