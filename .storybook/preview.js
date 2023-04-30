@@ -1,4 +1,6 @@
 /** @type { import('@storybook/web-components').Preview } */
+import '../src/themes/UniphoreDefaultTheme.css';
+
 const preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
