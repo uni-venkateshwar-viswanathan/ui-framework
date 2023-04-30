@@ -7,6 +7,7 @@ import {
   MEDIUM_BUTTON,
   SMALL_BUTTON,
 } from './uniphore-button-consts.js';
+import { withActions } from '@storybook/addon-actions/decorator';
 
 export default {
   title: 'UniphoreButton',
@@ -21,6 +22,12 @@ export default {
       options: [LARGE_BUTTON, MEDIUM_BUTTON, SMALL_BUTTON],
     },
   },
+  parameters: {
+    actions: {
+      handles: ['uniphore-button-click'],
+    },
+  },
+  decorators: [withActions],
 };
 
 export const Primary = {
