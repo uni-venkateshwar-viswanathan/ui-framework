@@ -23,22 +23,22 @@ export class UniphoreTag extends LitElement {
 
   render() {
     return html`
-      <span class="uniphore-tag-span">
+      <span class="uniphore-tag">
         <uniphore-label
-          id=${'uniphore-label' + this.id}
+          id=${`uniphore-label${this.id}`}
           class="uniphore-label"
           text=${this.label}
           color="${this.color}"
         ></uniphore-label>
-        ${this.getRemovableButton()}
+        ${this._getRemovableButton()}
       </span>
     `;
   }
 
-  getRemovableButton() {
+  _getRemovableButton() {
     if (this.removable) {
       return html`<button
-        id="${'remove-tag-' + this.id}"
+        id="${`remove-tag-${this.id}`}"
         @click="${() => this._removeTag()}"
       ></button>`;
     }

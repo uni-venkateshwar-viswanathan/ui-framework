@@ -6,5 +6,5 @@ export default {
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
   // The glob patterns Jest uses to detect test files
-  testMatch: ['<rootDir>/test/**/*.test.js'],
+  testMatch: ['<rootDir>/**/*.test.js'],
 };

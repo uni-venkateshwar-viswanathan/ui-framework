@@ -1,5 +1,5 @@
 import { expect, test, jest } from '@jest/globals';
-import '../../src/components/button/uniphore-button';
+import './uniphore-button';
 
 describe('uniphore-button web-component tests', () => {
   const BTN_TEXT = 'my btn text';

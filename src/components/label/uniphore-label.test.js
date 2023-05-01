@@ -1,4 +1,4 @@
-import '../../src/components/label/uniphore-label';
+import './uniphore-label';
 import { expect, jest, test } from '@jest/globals';
 import { fireEvent } from '@testing-library/dom';
 

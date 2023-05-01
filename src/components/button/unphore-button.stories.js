@@ -10,7 +10,8 @@ import {
 import { withActions } from '@storybook/addon-actions/decorator';
 
 export default {
-  title: 'UniphoreButton',
+  tags: ['autodocs'],
+  title: 'Button',
   component: 'uniphore-button',
   argTypes: {
     type: {
@@ -69,5 +70,21 @@ export const Small = {
   args: {
     text: 'SmallButton',
     size: SMALL_BUTTON,
+  },
+};
+
+export const PrimaryDisabledButton = {
+  args: {
+    text: 'PrimaryDisabledButton',
+    type: PRIMARY_BUTTON,
+    disabled: true,
+  },
+};
+
+export const SecondaryDisabledButton = {
+  args: {
+    text: 'SecondaryDisabledButton',
+    type: SECONDARY_BUTTON,
+    disabled: true,
   },
 };

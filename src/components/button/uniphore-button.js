@@ -11,7 +11,6 @@ import { dispatchWebComponentEvent } from '../../common.js';
 export class UniphoreButton extends LitElement {
   static properties = {
     text: { type: String },
-    autofocus: { type: Boolean },
     disabled: { type: Boolean },
     name: { type: String },
     formId: { type: String },
@@ -26,7 +25,6 @@ export class UniphoreButton extends LitElement {
     super();
 
     this.text = 'Button';
-    this.autofocus = false;
     this.disabled = false;
     this.name = 'uniphore-button';
     this.formId = -1;
@@ -39,41 +37,34 @@ export class UniphoreButton extends LitElement {
     const buttonClass = `${`uniphore-${this.type}-button`} ${
       ButtonSize[this.size]
     }`;
+    const buttonContent = html`
+      <slot name="uniphore-button-prefix"></slot>
+      ${this.text}
+      <slot name="uniphore-button-postfix"></slot>
+    `;
 
-    if (this.disabled) {
-      return html`
-        <button
-          type=${this.type}
-          autofocus=${this.autofocus}
-          name=${this.name}
+    return this.disabled
+      ? html`<button
           disabled
+          type=${this.nativeType}
+          name=${this.name}
           formId=${this.formId}
           class=${buttonClass}
           @click=${this._onButtonClick}
           part="uniphore-button"
         >
-          <slot name="uniphore-button-prefix"></slot>
-          ${this.text}
-          <slot name="uniphore-button-postfix"></slot>
-        </button>
-      `;
-    }
-
-    return html`
-      <button
-        type=${this.type}
-        autofocus=${this.autofocus}
-        name=${this.name}
-        formId=${this.formId}
-        class=${buttonClass}
-        @click=${this._onButtonClick}
-        part="uniphore-button"
-      >
-        <slot name="uniphore-button-prefix"></slot>
-        ${this.text}
-        <slot name="uniphore-button-postfix"></slot>
-      </button>
-    `;
+          ${buttonContent}
+        </button>`
+      : html`<button
+          type=${this.nativeType}
+          name=${this.name}
+          formId=${this.formId}
+          class=${buttonClass}
+          @click=${this._onButtonClick}
+          part="uniphore-button"
+        >
+          ${buttonContent}
+        </button>`;
   }
 
   _onButtonClick(event) {

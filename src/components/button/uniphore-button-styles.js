@@ -13,6 +13,10 @@ export const uniphoreButtonStyles = css`
     cursor: pointer;
   }
 
+  button:disabled {
+    cursor: var(--uniphore-button-disabled-cursor, not-allowed);
+  }
+
   .uniphore-primary-button {
     outline: none;
     color: var(--uniphore-primary-button-color, white);
@@ -23,7 +27,7 @@ export const uniphoreButtonStyles = css`
     border: 1px solid var(--uniphore-primary-button-background-color);
   }
 
-  .uniphore-primary-button:hover {
+  .uniphore-primary-button:hover:enabled {
     background-color: var(
       --uniphore-primary-button-hover-background-color,
       var(--primary-hover-blue-background-color)
@@ -35,7 +39,7 @@ export const uniphoreButtonStyles = css`
       );
   }
 
-  .uniphore-primary-button:active {
+  .uniphore-primary-button:active:enabled {
     background-color: var(
       --uniphore-primary-button-active-background-color,
       var(--uniphore-primary-button-hover-background-color)
@@ -58,7 +62,6 @@ export const uniphoreButtonStyles = css`
       var(--cool-grey-color)
     );
     border: 1px solid var(--cool-grey-color);
-    cursor: var(--uniphore-primary-button-disabled-cursor, not-allowed);
   }
 
   .uniphore-secondary-button {
@@ -71,14 +74,14 @@ export const uniphoreButtonStyles = css`
     background-color: var(--uniphore-secondary-button-background-color, white);
   }
 
-  .uniphore-secondary-button:hover {
+  .uniphore-secondary-button:hover:enabled {
     background-color: var(
       --uniphore-secondary-button-hover-background-color,
       var(--secondary-hover-blue-background-color)
     );
   }
 
-  .uniphore-secondary-button:active {
+  .uniphore-secondary-button:active:enabled {
     color: var(
       --uniphore-secondary-button-active-color,
       var(--active-blue-color)
@@ -115,14 +118,14 @@ export const uniphoreButtonStyles = css`
     color: var(--uniphore-text-button-disabled-color, var(--cool-grey-color));
   }
 
-  .uniphore-text-button:hover {
+  .uniphore-text-button:hover:enabled {
     color: var(
       --uniphore-text-button-hover-color,
       var(--primary-hover-blue-background-color)
     );
   }
 
-  .uniphore-text-button:active {
+  .uniphore-text-button:active:enabled {
     color: var(--uniphore-text-button-active-color, var(--active-blue-color));
   }
 
