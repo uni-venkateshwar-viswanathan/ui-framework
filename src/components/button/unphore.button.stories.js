@@ -71,3 +71,19 @@ export const Small = {
     size: SMALL_BUTTON,
   },
 };
+
+export const PrimaryDisabledButton = {
+  args: {
+    text: 'PrimaryDisabledButton',
+    type: PRIMARY_BUTTON,
+    disabled: true,
+  },
+};
+
+export const SecondaryDisabledButton = {
+  args: {
+    text: 'SecondaryDisabledButton',
+    type: SECONDARY_BUTTON,
+    disabled: true,
+  },
+};
