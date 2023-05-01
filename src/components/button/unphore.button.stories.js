@@ -1,26 +1,73 @@
-import { html } from 'lit';
 import './uniphore-button.js';
-import '../../themes/UniphoreDefaultTheme.css';
 import {
   PRIMARY_BUTTON,
   SECONDARY_BUTTON,
   TEXT_BUTTON,
+  LARGE_BUTTON,
+  MEDIUM_BUTTON,
+  SMALL_BUTTON,
 } from './uniphore-button-consts.js';
+import { withActions } from '@storybook/addon-actions/decorator';
 
 export default {
   title: 'UniphoreButton',
-  render: args =>
-    html`<uniphore-button
-      text="${args.text}"
-      type="${args.type}"
-    ></uniphore-button>`,
+  component: 'uniphore-button',
   argTypes: {
-    type: [PRIMARY_BUTTON, SECONDARY_BUTTON, TEXT_BUTTON],
+    type: {
+      control: 'select',
+      options: [PRIMARY_BUTTON, SECONDARY_BUTTON, TEXT_BUTTON],
+    },
+    size: {
+      control: 'select',
+      options: [LARGE_BUTTON, MEDIUM_BUTTON, SMALL_BUTTON],
+    },
   },
+  parameters: {
+    actions: {
+      handles: ['uniphore-button-click'],
+    },
+  },
+  decorators: [withActions],
 };
+
 export const Primary = {
   args: {
     text: 'PrimaryButton',
     type: PRIMARY_BUTTON,
+  },
+};
+
+export const Secondary = {
+  args: {
+    text: 'SecondaryButton',
+    type: SECONDARY_BUTTON,
+  },
+};
+
+export const Text = {
+  args: {
+    text: 'TextButton',
+    type: TEXT_BUTTON,
+  },
+};
+
+export const Large = {
+  args: {
+    text: 'LargeButton',
+    size: LARGE_BUTTON,
+  },
+};
+
+export const Medium = {
+  args: {
+    text: 'MediumButton',
+    size: MEDIUM_BUTTON,
+  },
+};
+
+export const Small = {
+  args: {
+    text: 'SmallButton',
+    size: SMALL_BUTTON,
   },
 };

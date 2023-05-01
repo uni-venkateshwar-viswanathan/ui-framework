@@ -4,11 +4,6 @@ import {
   ButtonSize,
   MEDIUM_BUTTON,
   PRIMARY_BUTTON,
-  SECONDARY_BUTTON,
-  PRIMARY_BUTTON_CLASS,
-  SECONDARY_BUTTON_CLASS,
-  TEXT_BUTTON,
-  TEXT_BUTTON_CLASS,
 } from './uniphore-button-consts.js';
 import { uniphoreButtonStyles } from './uniphore-button-styles.js';
 import { dispatchWebComponentEvent } from '../../common.js';
@@ -41,6 +36,10 @@ export class UniphoreButton extends LitElement {
   }
 
   render() {
+    const buttonClass = `${`uniphore-${this.type}-button`} ${
+      ButtonSize[this.size]
+    }`;
+
     if (this.disabled) {
       return html`
         <button
@@ -49,7 +48,7 @@ export class UniphoreButton extends LitElement {
           name=${this.name}
           disabled
           formId=${this.formId}
-          class=${this._getClass()}
+          class=${buttonClass}
           @click=${this._onButtonClick}
           part="uniphore-button"
         >
@@ -66,7 +65,7 @@ export class UniphoreButton extends LitElement {
         autofocus=${this.autofocus}
         name=${this.name}
         formId=${this.formId}
-        class=${this._getClass()}
+        class=${buttonClass}
         @click=${this._onButtonClick}
         part="uniphore-button"
       >
@@ -79,24 +78,6 @@ export class UniphoreButton extends LitElement {
 
   _onButtonClick(event) {
     dispatchWebComponentEvent(this, 'uniphore-button-click', event);
-  }
-
-  _getClass() {
-    let buttonClass = '';
-
-    switch (this.type) {
-      case PRIMARY_BUTTON:
-        buttonClass = PRIMARY_BUTTON_CLASS;
-        break;
-      case SECONDARY_BUTTON:
-        buttonClass = SECONDARY_BUTTON_CLASS;
-        break;
-      case TEXT_BUTTON:
-        buttonClass = TEXT_BUTTON_CLASS;
-        break;
-      default:
-    }
-    return `${buttonClass} ${ButtonSize[this.size]}`;
   }
 }
 
