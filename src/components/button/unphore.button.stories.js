@@ -10,7 +10,8 @@ import {
 import { withActions } from '@storybook/addon-actions/decorator';
 
 export default {
-  title: 'UniphoreButton',
+  tags: ['autodocs'],
+  title: 'Button',
   component: 'uniphore-button',
   argTypes: {
     type: {
