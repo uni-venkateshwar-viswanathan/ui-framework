@@ -1,19 +1,22 @@
 import { css } from 'lit';
 
 export const uniphoreTagStyles = css`
-  .uniphore-tag-span {
+  .uniphore-tag {
     position: relative;
     display: inline-block;
     min-width: 20px;
     max-width: 180px;
     height: 30px;
     font-size: 13px;
-    background-color: var(--tag-background-color, rgba(2, 136, 209, 0.15));
-    border: var(--tag-border, 1px solid #dcdfe6);
+    background-color: var(
+      --uniphore-tag-background-color,
+      rgba(2, 136, 209, 0.15)
+    );
+    border: var(--uniphore-tag-border, 1px solid #dcdfe6);
     border-radius: 4px;
-    color: var(--tag-color, #606266);
+    color: var(--uniphore-tag-color, #606266);
     padding-left: 6px;
-    padding-right: var(--tag-padding-right, 6px);
+    padding-right: var(--uniphore-tag-padding-right, 6px);
     box-sizing: border-box;
   }
 
