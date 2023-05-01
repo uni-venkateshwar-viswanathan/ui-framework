@@ -1,5 +1,5 @@
 import { expect, test, jest } from '@jest/globals';
-import '../../../src/components/tags/uniphore-tag/uniphore-tag.js';
+import './uniphore-tag.js';
 //import { waitFor } from '@testing-library/dom';
 
 describe('uniphore-tag web-component tests', () => {

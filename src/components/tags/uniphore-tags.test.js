@@ -1,5 +1,5 @@
 import { expect, test, jest } from '@jest/globals';
-import '../../src/components/tags/uniphore-tags';
+import './uniphore-tags';
 
 describe('uniphore-tags web-component tests', () => {
   const TAG_LABEL = 'TAG_LABEL';

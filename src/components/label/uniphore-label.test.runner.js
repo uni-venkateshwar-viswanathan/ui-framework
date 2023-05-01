@@ -1,5 +1,5 @@
 import { assert } from '@esm-bundle/chai';
-import LabelElement from '../../src/components/label/uniphore-label.js';
+import LabelElement from './uniphore-label.js';
 
 describe(`Those tests are testing the behavior of the custom element <uniphore-label>`, () => {
   it('test component is rendered successfully', () => {

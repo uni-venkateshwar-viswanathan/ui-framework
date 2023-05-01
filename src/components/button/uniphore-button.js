@@ -43,7 +43,7 @@ export class UniphoreButton extends LitElement {
     if (this.disabled) {
       return html`
         <button
-          type=${this.type}
+          type=${this.nativeType}
           autofocus=${this.autofocus}
           name=${this.name}
           disabled
@@ -61,7 +61,7 @@ export class UniphoreButton extends LitElement {
 
     return html`
       <button
-        type=${this.type}
+        type=${this.nativeType}
         autofocus=${this.autofocus}
         name=${this.name}
         formId=${this.formId}
