@@ -24,7 +24,8 @@ export const uniphoreButtonStyles = css`
       --uniphore-primary-button-background-color,
       var(--true-blue-color)
     );
-    border: 1px solid var(--uniphore-primary-button-background-color);
+    border: 1px solid
+      var(--uniphore-primary-button-background-color, var(--true-blue-color));
   }
 
   .uniphore-primary-button:hover:enabled {
@@ -33,21 +34,18 @@ export const uniphoreButtonStyles = css`
       var(--primary-hover-blue-background-color)
     );
     border: 1px solid
-      var(
-        --uniphore-primary-button-hover-border-color,
-        var(--uniphore-primary-button-hover-background-color)
-      );
+      var(--uniphore-primary-button-hover-border-color, var(--true-blue-color));
   }
 
   .uniphore-primary-button:active:enabled {
     background-color: var(
       --uniphore-primary-button-active-background-color,
-      var(--uniphore-primary-button-hover-background-color)
+      var(--primary-hover-blue-background-color)
     );
     border: 1px solid
       var(
         --uniphore-primary-button-active-background-color,
-        var(--uniphore-primary-button-hover-background-color)
+        var(--true-blue-color)
       );
   }
 

@@ -88,3 +88,10 @@ export const SecondaryDisabledButton = {
     disabled: true,
   },
 };
+
+export const ButtonWithLongLabel = {
+  args: {
+    ...Primary.args,
+    text: 'LooooonnnnnnnggggggTexxxxxxxxtttttt',
+  },
+};

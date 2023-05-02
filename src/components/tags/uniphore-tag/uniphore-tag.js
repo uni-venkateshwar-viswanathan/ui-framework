@@ -64,7 +64,7 @@ export class UniphoreTag extends LitElement {
       tagId: this.id,
     };
 
-    dispatchWebComponentEvent(this, 'remove-tag', details);
+    dispatchWebComponentEvent(this, 'on-remove-tag', details);
   }
 
   connectedCallback() {

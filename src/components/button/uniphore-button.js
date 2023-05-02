@@ -37,34 +37,20 @@ export class UniphoreButton extends LitElement {
     const buttonClass = `${`uniphore-${this.type}-button`} ${
       ButtonSize[this.size]
     }`;
-    const buttonContent = html`
+
+    return html`<button
+      type=${this.nativeType}
+      name=${this.name}
+      formId=${this.formId}
+      class=${buttonClass}
+      ?disabled=${this.disabled}
+      @click=${this._onButtonClick}
+      part="uniphore-button"
+    >
       <slot name="uniphore-button-prefix"></slot>
       ${this.text}
       <slot name="uniphore-button-postfix"></slot>
-    `;
-
-    return this.disabled
-      ? html`<button
-          disabled
-          type=${this.nativeType}
-          name=${this.name}
-          formId=${this.formId}
-          class=${buttonClass}
-          @click=${this._onButtonClick}
-          part="uniphore-button"
-        >
-          ${buttonContent}
-        </button>`
-      : html`<button
-          type=${this.nativeType}
-          name=${this.name}
-          formId=${this.formId}
-          class=${buttonClass}
-          @click=${this._onButtonClick}
-          part="uniphore-button"
-        >
-          ${buttonContent}
-        </button>`;
+    </button>`;
   }
 
   _onButtonClick(event) {
