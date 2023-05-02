@@ -20,7 +20,6 @@ export class UniphoreTags extends LitElement {
     this.removable = false;
     this.showAddTag = false;
     this.addTagPlaceholder = '+ Add Tag';
-    this.doValidate = false;
   }
 
   render() {
@@ -41,32 +40,31 @@ export class UniphoreTags extends LitElement {
         <input
           class="add-tag-input"
           type="text"
-          ?disabled=${this.tags.length == 0 && this.doValidate}
           placeholder=${this.addTagPlaceholder}
-          @keypress=${this.addTag}
-          @blur="${this.addTag}"
+          @keypress=${this._addTag}
+          @blur="${this._addTag}"
         />
       </li>`;
     }
   }
 
   _getTag(item, index) {
-    if (!this.removable || (index == 0 && this.doValidate)) {
+    if (this.removable) {
       return html`<uniphore-tag
         id=${index}
         label=${item.label}
+        removable=${this.removable}
         background=${item.background}
         color="${item.color}"
+        @on-remove-tag=${this._onRemoveTag}
       ></uniphore-tag>`;
     }
 
     return html`<uniphore-tag
       id=${index}
       label=${item.label}
-      removable=${this.removable}
       background=${item.background}
       color="${item.color}"
-      @remove-tag=${this.onRemoveTag}
     ></uniphore-tag>`;
   }
 
@@ -74,10 +72,9 @@ export class UniphoreTags extends LitElement {
     return this.renderRoot?.querySelector('.add-tag-input') ?? null;
   }
 
-  onRemoveTag(event) {
+  _onRemoveTag(event) {
     const tagIdToRemove = event.detail.tagId;
-    // const tagToRemove = this.tags.find(tag => tag.id === tagIdToRemove);
-    let indexTagToRemove = event.detail.tagId;
+    const indexTagToRemove = event.detail.tagId;
     const tagToRemove = this.tags[indexTagToRemove];
     const details = {
       message: 'remove tag',
@@ -89,7 +86,7 @@ export class UniphoreTags extends LitElement {
     dispatchWebComponentEvent(this, 'remove-tag', details);
   }
 
-  addTag(event) {
+  _addTag(event) {
     if (event && (event.key === 'Enter' || event.type === 'blur')) {
       if (this.input.value) {
         const newTag = { label: this.input.value };
