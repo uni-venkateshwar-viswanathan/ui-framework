@@ -8,7 +8,6 @@
   "license": "ISC",
   "scripts": {
     "husky:prepare": "husky install",
-    "testR": "web-test-runner test/**/*.test.js --node-resolve",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint **/*.js",
     "lint:fix": "npm run lint -- --fix",
