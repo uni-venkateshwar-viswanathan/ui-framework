@@ -32,7 +32,7 @@ export class UniphoreTreeChildNode extends LitElement {
             class="uniphore-tree-child-node-label-text"
             @click="${this._onTreeChildNodeClick}"
           >
-            <uniphore-label text="${this.node.label}"></uniphore-label>
+            <uniphore-label text="${this.node.label}" .showEllipsis="${false}></uniphore-label>
           </div>
         </div>
         ${this._addParentNode(this.node)}
