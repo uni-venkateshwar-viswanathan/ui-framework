@@ -6,7 +6,6 @@
   "author": "Uniphore",
   "type": "module",
   "license": "ISC",
-  "homepage": "http://uniphore.github.io/ui-framework",
   "scripts": {
     "husky:prepare": "husky install",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
