@@ -22,7 +22,6 @@ const config = {
   docs: {
     autodocs: 'tag',
     defaultName: 'Documentation',
-  },
-  storybookStatic: '../docs'
+  }
 };
 export default config;
