@@ -22,6 +22,7 @@
     ]
   },
   "dependencies": {
+    "classnames": "^2.3.2",
     "lit": "2.4.1",
     "tinymce": "6.3.1"
   },
@@ -33,15 +34,18 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
     "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
     "@esm-bundle/chai": "^4.3.4-fix.0",
     "@storybook/addon-essentials": "^7.0.6",
     "@storybook/addon-links": "^7.0.6",
     "@storybook/addon-mdx-gfm": "^7.0.6",
+    "@storybook/addon-styling": "^1.0.6",
     "@storybook/blocks": "^7.0.6",
     "@storybook/web-components": "^7.0.6",
     "@storybook/web-components-webpack5": "^7.0.6",
     "@testing-library/dom": "^8.19.1",
     "@web/test-runner": "^0.15.0",
+    "babel-jest": "^29.3.1",
     "chai": "^4.3.7",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
@@ -59,8 +63,8 @@
     "prettier": "^2.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.0.6",
-    "babel-jest": "^29.3.1"
+    "sass": "^1.62.1",
+    "storybook": "^7.0.6"
   },
   "engines": {
     "node": ">=18.16.0"
