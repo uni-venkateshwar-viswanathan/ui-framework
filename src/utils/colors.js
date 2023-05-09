@@ -1,11 +1,3 @@
-export const allUniphoreColors = [
-  '--uniphore-color-honeydew',
-  '--uniphore-color-emerald',
-  '--uniphore-color-pantone-green',
-  '--uniphore-color-grass-green',
-  '--uniphore-color-true-green',
-];
-
 export const colorsMap = [
   { color: '--white-color', description: 'Description should go here.....' },
   {
