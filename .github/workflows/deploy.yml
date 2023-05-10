@@ -18,14 +18,13 @@ jobs:
         with:
           node-version: '18'  # or the version you prefer
 
-      - name: Build and deploy
-        run: |
-          npm install  # or `npm install` if you have a package-lock.json file
-          npm run build-storybook  # adjust the build command to your project
+      - name: Install and Build
+          run: |
+            npm install
+            npm run build-storybook
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages  # or the branch you want to deploy to
-          publish_dir: ./build  # adjust the directory where your built files are located
+            - name: Deploy
+              uses: JamesIves/github-pages-deploy-action@3.6.2
+              with:
+                branch: gh-pages
+                folder: storybook-static # output folder from `npm run build-storybook`
