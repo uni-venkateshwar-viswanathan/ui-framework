@@ -1,0 +1,35 @@
+@import "../../../styles/css-settings";
+@import "../../../styles/theme-mixins";
+@import "../../../styles/typography";
+
+@mixin system-regular-text {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.uniphore-storybook-text-description {
+  &_visual-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--paragraph {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &--heading {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  figure {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+
+

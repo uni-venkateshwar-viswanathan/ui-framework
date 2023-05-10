@@ -1,0 +1,92 @@
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+@mixin base-font($font-variable) {
+  font-family: $font-variable;
+}
+
+@mixin base-primary-font {
+  @include base-font(var(--font-h1));
+  letter-spacing: -1px;
+  font-size: 64px;
+  font-weight: $font-weight-bold;
+}
+
+.font-h1 {
+  @include base-primary-font;
+}
+
+.font-h2 {
+  @include base-primary-font;
+  font-size: 48px;
+}
+
+@mixin base-big-font-subtitle {
+  @include base-primary-font;
+  font-size: 24px;
+}
+
+.font-subtitle-h1 {
+  @include base-big-font-subtitle;
+}
+
+.font-subtitle-h2 {
+  @include base-big-font-subtitle;
+  font-weight: $font-weight-normal;
+}
+
+@mixin base-small-font-subtitle {
+  @include base-primary-font;
+  font-size: 18px;
+}
+
+.font-subtitle-h3 {
+  @include base-small-font-subtitle;
+}
+
+.font-subtitle-h4 {
+  @include base-small-font-subtitle;
+  font-weight: $font-weight-normal;
+}
+
+@mixin base-big-font-body {
+  @include base-primary-font;
+  font-size: 16px;
+}
+
+.font-body-h1 {
+  @include base-big-font-body;
+}
+
+.font-body-h2 {
+  @include base-big-font-body;
+  font-weight: $font-weight-normal;
+}
+
+@mixin base-medium-font-body {
+  @include base-primary-font;
+  font-size: 14px;
+}
+
+.font-body-h3 {
+  @include base-medium-font-body;
+}
+
+.font-body-h4 {
+  @include base-medium-font-body;
+  font-weight: $font-weight-normal;
+}
+
+@mixin base-small-font-body {
+  @include base-primary-font;
+  font-size: 12px;
+}
+
+.font-body-h5 {
+  @include base-small-font-body;
+}
+
+.font-body-h6 {
+  @include base-small-font-body;
+  font-weight: $font-weight-normal;
+}

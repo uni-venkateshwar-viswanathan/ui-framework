@@ -2,4 +2,9 @@
 
 .uniphore-storybook-color-description {
   border-radius: $border-radius-extra-small;
-  }
+}
+
+.uniphore-storybook-color-visual-description > figure {
+  width: 40px;
+  height: 40px;
+}
