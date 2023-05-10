@@ -19,15 +19,15 @@ jobs:
           node-version: '18'  # or the version you prefer
 
       - name: Install and Build
-          run: |
+        run: |
             npm install
             npm run build-storybook -- -o static_storybook
 
       - name: Push to Storybook's branch
-          if: success()
-          uses: crazy-max/ghaction-github-pages@v2
-          with:
-            target_branch: "main"
-            build_dir: static_storybook
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: "main"
+          build_dir: static_storybook
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
