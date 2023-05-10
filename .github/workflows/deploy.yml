@@ -20,12 +20,12 @@ jobs:
 
       - name: Install and Build
         run: |
-            npm install
-            npm run build-storybook -- -o static_storybook
+            npm ci
+            npm run build-storybook
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh_pages_Hila_poc  # or the branch you want to deploy to
-          publish_dir: ./static_storybook  # adjust the directory where your built files are located
+          publish_dir: ./build  # adjust the directory where your built files are located
