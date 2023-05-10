@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install and Build
+      - name: Build and deploy
           run: |
-            npm install
-            npm run build-storybook
+            npm install  # or `npm install` if you have a package-lock.json file
+            npm run build-storybook  # adjust the build command to your project
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
