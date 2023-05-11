@@ -11,7 +11,7 @@ export const ColorDescription = ({ colorName, description }) => {
     />
   );
   return (
-    <VisualDescription title={colorName} description={description}>
+    <VisualDescription title={colorName} description={description} className="uniphore-storybook-color-visual-description">
       {color}
     </VisualDescription>
   );

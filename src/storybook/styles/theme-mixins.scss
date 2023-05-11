@@ -20,10 +20,14 @@ $asphalt: #676879;
 $higlight: #dff0ff;
 
 $theme: (
-  "layout-border-color": $ui-grey
+  "layout-border-color": $ui-grey,
+  "primary-text-color": $mud-black,
+  "secondary-text-color": $mud-black,
 );
 $theme-var: (
-  "layout-border-color": var(--layout-border-color)
+  "layout-border-color": var(--layout-border-color),
+  "primary-text-color": var(--primary-text-color),
+  "secondary-text-color": var(--secondary-text-color)
 );
 
 @mixin theme-prop($property: color, $color-variable: primary-text-color, $important: false) {
