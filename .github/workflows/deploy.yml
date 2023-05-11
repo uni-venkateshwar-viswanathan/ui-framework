@@ -25,7 +25,6 @@ jobs:
             pwd
             npm install
             npm run build-storybook -- -o storybook-static
-            ls -la
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
