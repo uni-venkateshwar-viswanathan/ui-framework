@@ -1,5 +1,5 @@
 /** @type { import('@storybook/web-components').Preview } */
-import '../src/themes/UniphoreDefaultTheme.css';
+import '../src/themes/uniphore-default-theme.css';
 
 const preview = {
   parameters: {
