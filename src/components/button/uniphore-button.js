@@ -10,10 +10,9 @@ import { dispatchWebComponentEvent } from '../../common.js';
 
 export class UniphoreButton extends LitElement {
   static properties = {
-    text: { type: String },
-    disabled: { type: Boolean },
+    id: { type: String },
+    isDisabled: { type: Boolean },
     name: { type: String },
-    formId: { type: String },
     nativeType: { type: String },
     size: { type: String },
     type: { type: String },
@@ -24,10 +23,9 @@ export class UniphoreButton extends LitElement {
   constructor() {
     super();
 
-    this.text = 'Button';
-    this.disabled = false;
+    this.isDisabled = false;
+
     this.name = 'uniphore-button';
-    this.formId = -1;
     this.nativeType = ButtonType.button;
     this.size = MEDIUM_BUTTON;
     this.type = PRIMARY_BUTTON;
@@ -41,14 +39,13 @@ export class UniphoreButton extends LitElement {
     return html`<button
       type=${this.nativeType}
       name=${this.name}
-      formId=${this.formId}
       class=${buttonClass}
-      ?disabled=${this.disabled}
+      ?disabled=${this.isDisabled}
       @click=${this._onButtonClick}
       part="uniphore-button"
     >
       <slot name="uniphore-button-prefix"></slot>
-      ${this.text}
+      <slot></slot>
       <slot name="uniphore-button-postfix"></slot>
     </button>`;
   }
