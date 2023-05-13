@@ -1,5 +1,7 @@
 $font-weight-normal: 400;
 $font-weight-bold: 700;
+$header-primary-font: var(--title-font-family);
+$h1-font-size: 40px;
 
 @mixin base-font($font-variable) {
   font-family: $font-variable;
