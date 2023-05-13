@@ -1,6 +1,10 @@
 {
-  "name": "common-web-components",
+  "name": "@uniphore/ui-framework",
+  "repository": "https://github.com/uniphore/ui-framework",
   "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "description": "",
   "keywords": [],
   "author": "Uniphore",
@@ -16,7 +20,7 @@
     "build-storybook": "storybook build"
   },
   "lint-staged": {
-    "*.js": [
+    "src/**/*.js": [
       "prettier --write",
       "eslint"
     ]
