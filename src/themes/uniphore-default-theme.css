@@ -1,3 +1,5 @@
+@import '../assets/fonts/Poppins/poppins-fonts.css';
+
 :root {
     /* Neutral Colors (60%) */
     --white-color: #ffffff;
@@ -46,10 +48,9 @@
     --bright-lav-color: #AE93FF;
     --darl-lav-color: #7D55C7;
 
-    --font-h1: Poppins-Bold;
-
-    --primary-hover-blue-background-color: #3381DE;
-    --secondary-hover-blue-background-color: #AFD5FF;
-    --secondary-active-blue-background-color: #99C0EF;
-    --uniphore-font-family: Poppins;
+    --primary-active-color: var(--active-blue-color);
+    --primary-hover-color: #3381DE;
+    --secondary-hover-color: #AFD5FF;
+    --secondary-active-color: #99C0EF;
+    --uniphore-font-family: Poppins-Regular;
     }
