@@ -12,5 +12,3 @@ export const Frame = ({ children, className, noGutter, noBorder }) => (
     {children}
   </div>
 );
-
-export default Frame;
