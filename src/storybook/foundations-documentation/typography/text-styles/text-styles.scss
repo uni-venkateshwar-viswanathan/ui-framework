@@ -1,6 +1,7 @@
 @import "../../../styles/css-settings";
 @import "../../../styles/theme-mixins";
 @import "../../../styles/typography";
+@import "../../../../assets//fonts//Poppins/poppins-fonts.css";
 
 @mixin system-regular-text {
   font-size: 14px;
@@ -26,7 +27,6 @@
 
   figure {
     width: 100px;
-    height: 100px;
   }
 }
 
