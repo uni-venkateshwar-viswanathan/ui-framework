@@ -1,45 +1,15 @@
 @import "uniphore-default-theme.css";
+@import './colors.css';
 
 .pink-theme {
-    /* Neutral Colors (60%) */
-    --white-color: #ffffff;
-    --white-grey-color: #F8F9FC;
-    --warm-grey-color: #E9ECF4;
-    --frost-grey-color: #E9ECF4;
-    --pale-grey-color: #D7DAE3;
-    --silver-color: #BFBFD0;
-    --medium-grey-color: #ABAEBC;
-    --cool-grey-color: #8B8BA0;
-    --sonic-grey-color: #6D6F79;
-    --onix-color: #424242;
-    --jet-color: #333333;
-
-    /* Blue: Active / call to action / Links */
-    --icy-blue-color: #E2F0FF;
-    --baby-blue-color: #6DD4FF;
-    --uniphore-blue-color: #4DA1FF;
-    --true-blue-color: #0062D6;
-    --active-blue-color: #004EAB;
-    --oxford-blue-color: #042351;
-    --nav-blue-color: #222738;
-
-    --font-h1: Poppins-Bold;
-
-
-    --gold-pink: #E6C7C2;
-    --strong-pink: #E61A6B;
-    --dark-pink: #E75480;
-    --soft-pink: #F2A4C1;
-    --pale-pink: #C4AEAD;
-
     --uniphore-primary-button-background-color: var(--strong-pink);
     --uniphore-primary-button-hover-background-color: var(--soft-pink);
     --uniphore-primary-button-hover-border-color: var(--soft-pink);
     --uniphore-secondary-button-color: var(--dark-pink);
     --uniphore-secondary-button-border: var(--dark-pink);
-    --uniphore-secondary-button-hover-background-color: #FFE6E8;
+    --uniphore-secondary-button-hover-background-color: var(--light-pink);
     --uniphore-text-button-color: var(--strong-pink);
-    --uniphore-text-button-hover-color: #C08081;
+    --uniphore-text-button-hover-color: var(--rose-pink);
     --uniphore-primary-button-disabled-background-color: var(--pale-pink);
     --uniphore-primary-button-disabled-border-color: var(--pale-pink);
     --uniphore-secondary-button-disabled-color: var(--pale-pink);

@@ -1,0 +1,57 @@
+:root {
+    /* Neutral Colors (60%) */
+    --white-color: #ffffff;
+    --white-grey-color: #F8F9FC;
+    --warm-grey-color: #E9ECF4;
+    --frost-grey-color: #E9ECF4;
+    --pale-grey-color: #D7DAE3;
+    --silver-color: #BFBFD0;
+    --medium-grey-color: #ABAEBC;
+    --cool-grey-color: #8B8BA0;
+    --sonic-grey-color: #6D6F79;
+    --onix-color: #424242;
+    --jet-color: #333333;
+
+    /* Blue: Active / call to action / Links */
+    --icy-blue-color: #E2F0FF;
+    --baby-blue-color: #6DD4FF;
+    --uniphore-blue-color: #4DA1FF;
+    --true-blue-color: #0062D6;
+    --active-blue-color: #004EAB;
+    --oxford-blue-color: #042351;
+    --nav-blue-color: #222738;
+
+    /* Green: Approved / done / Processed  */
+    --honeydew-color: #DAF4E7;
+    --emerald-color: #4BCB8D;
+    --panton-green-color: #00B55D;
+    --grass-green-color: #7EB93D;
+    --true-green-color: #62A01E;
+
+    /* Yellow: Warning / pending */
+    --cosmic-latte-color: #FEF7EA;
+    --corn-silk-color: #FFF5DB;
+    --marigold-color: #F2A71E;
+    --harvest-gold-color: #DB8900;
+    --orange-color: #EB5A29;
+
+    /* Red: Error / Stop */
+    --linen-color: #FFE5D6;
+    --raw-silk-color: #FFE5D6;
+    --pale-magenta-color: #FF97D1;
+    --ultra-red-color: #FF7581;
+    --dark-candy-red-color: #AA0000;
+
+    /* Purple */
+    --bright-lav-color: #AE93FF;
+    --darl-lav-color: #7D55C7;
+
+    /* Pink */
+    --gold-pink: #E6C7C2;
+    --strong-pink: #E61A6B;
+    --dark-pink: #E75480;
+    --soft-pink: #F2A4C1;
+    --pale-pink: #C4AEAD;
+    --light-pink: #FFE6E8;
+    --rose-pink: #C08081;
+}
