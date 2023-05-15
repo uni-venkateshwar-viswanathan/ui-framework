@@ -14,14 +14,13 @@ const preview = {
     },
 
     themes: {
+      // https://storybook.js.org/addons/storybook-addon-themes/
       default: 'uniphore-default-theme',
       list: [
-        { name: 'pink-theme', class: ['pink-theme', 'light-mode'], color: 'pink' },
-        { name: 'uniphore-default-theme', class: ['uniphore-default-theme', 'dark-mode'], color: '#3b5998' }
+        { name: 'pink-theme', class: ['pink-theme'], color: '#E61A6B' },
+        { name: 'uniphore-default-theme', class: ['uniphore-default-theme'], color: '#0062D6' }
       ],
     }
-
-
   },
 };
 
