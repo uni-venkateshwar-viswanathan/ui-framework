@@ -15,12 +15,12 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint **/*.js",
     "lint:fix": "npm run lint -- --fix",
-    "prettier:fix": "npx prettier -w **/*.js",
+    "prettier:fix": "npx prettier -w **/*.{js, jsx}",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.{js,jsx}": [
       "prettier --write",
       "eslint"
     ]
