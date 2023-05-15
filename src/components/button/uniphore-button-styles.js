@@ -5,7 +5,7 @@ export const uniphoreButtonStyles = css`
     display: flex;
     align-items: center;
     border-radius: 4px;
-    font-family: var(--uniphore-font-family, --poppins-semi-bold);
+    font-family: var(--uniphore-font-family, var(--poppins-semi-bold));
     font-weight: var(--button-text-weight, 500);
   }
 

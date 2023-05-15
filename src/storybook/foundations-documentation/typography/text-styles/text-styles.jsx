@@ -17,6 +17,12 @@ const fontStyles = [
     className: 'font-h2',
   },
   {
+    fontType: 'H3',
+    title: 'Third heading (Poppins 32px bold)',
+    description: 'Use as third header on a page',
+    className: 'font-h3',
+  },
+  {
     fontType: 'Subtitle1',
     title: 'Subtitle big strong (Poppins 24px bold)',
     description: 'Use as a bold big subtitle',

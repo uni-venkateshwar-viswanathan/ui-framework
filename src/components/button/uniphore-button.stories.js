@@ -11,14 +11,18 @@ import {
 } from './uniphore-button-consts.js';
 import { withActions } from '@storybook/addon-actions/decorator';
 import { horizontalStory } from '../../storybook/decorators/horizontal-story.js';
+import submit from '../../storybook/assets/images/submit.svg';
 
 export default {
   title: 'Button',
   component: 'uniphore-button',
   render: args => html`
     <uniphore-button
+      id=${args.id}
+      name=${args.name}
       type=${args.type}
       size=${args.size}
+      nativeType=${args.nativeType}
       .isDisabled=${args.isDisabled}
     >
       ${args.text}
@@ -48,6 +52,8 @@ export default {
 
 export const PrimaryButton = {
   args: {
+    id: 'uniphore-button1',
+    name: 'uniphore-button',
     text: 'PrimaryButton',
     type: PRIMARY_BUTTON,
     size: MEDIUM_BUTTON,
@@ -106,4 +112,24 @@ export const ButtonKindsDisabled = {
     >
   `,
   decorators: [horizontalStory],
+};
+
+export const ButtonWithPrefix = {
+  render: () => html` <uniphore-button
+    type=${PRIMARY_BUTTON}
+    size=${MEDIUM_BUTTON}
+  >
+    <img slot="uniphore-button-prefix" src=${submit} />
+    <span>Primary</span>
+  </uniphore-button>`,
+};
+
+export const ButtonWithPostfix = {
+  render: () => html` <uniphore-button
+    type=${PRIMARY_BUTTON}
+    size=${MEDIUM_BUTTON}
+  >
+    <img slot="uniphore-button-postfix" src=${submit} />
+    <span>Primary</span>
+  </uniphore-button>`,
 };
