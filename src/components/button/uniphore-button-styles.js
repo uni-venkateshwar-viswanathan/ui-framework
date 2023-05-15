@@ -59,7 +59,7 @@ export const uniphoreButtonStyles = css`
       --uniphore-primary-button-disabled-background-color,
       var(--cool-grey-color)
     );
-    border: 1px solid var(var(--uniphore-primary-button-disabled-border-color), var(--cool-grey-color));
+    border: 1px solid var(--uniphore-primary-button-disabled-border-color, var(--cool-grey-color));
   }
 
   .uniphore-secondary-button {
@@ -93,10 +93,9 @@ export const uniphoreButtonStyles = css`
       --uniphore-secondary-button-disabled-color,
       var(--cool-grey-color)
     );
-    border: var(
-      --uniphore-secondary-button-disabled-border,
-      1px solid var(--cool-grey-color)
-    );
+    border:
+      1px solid var(--uniphore-secondary-button-disabled-border, var(--cool-grey-color));
+ 
   }
 
   button.uniphore-text-button {

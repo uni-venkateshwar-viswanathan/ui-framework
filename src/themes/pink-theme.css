@@ -41,7 +41,10 @@
     --uniphore-text-button-color: var(--strong-pink);
     --uniphore-text-button-hover-color: #C08081;
     --uniphore-primary-button-disabled-background-color: var(--pale-pink);
-    ----uniphore-primary-button-disabled-border-color: var(--pale-pink);
+    --uniphore-primary-button-disabled-border-color: var(--pale-pink);
+    --uniphore-secondary-button-disabled-color: var(--pale-pink);
+    --uniphore-secondary-button-disabled-border: var(--pale-pink);
+    --uniphore-text-button-disabled-color: var(--pale-pink);
 
     --uniphore-font-family: Poppins;
 }
