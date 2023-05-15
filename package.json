@@ -1,6 +1,10 @@
 {
-  "name": "common-web-components",
+  "name": "@uniphore/ui-framework",
+  "repository": "https://github.com/uniphore/ui-framework",
   "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "description": "",
   "keywords": [],
   "author": "Uniphore",
@@ -9,14 +13,14 @@
   "scripts": {
     "husky:prepare": "husky install",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "lint": "eslint **/*.js",
+    "lint": "eslint src/**/*.{js,jsx}",
     "lint:fix": "npm run lint -- --fix",
-    "prettier:fix": "npx prettier -w **/*.js",
+    "prettier:fix": "npx prettier -w src/**/*.{js,jsx}",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "lint-staged": {
-    "*.js": [
+    "src/**/*.{js,jsx}": [
       "prettier --write",
       "eslint"
     ]
@@ -38,7 +42,6 @@
     "@esm-bundle/chai": "^4.3.4-fix.0",
     "@storybook/addon-essentials": "^7.0.6",
     "@storybook/addon-links": "^7.0.6",
-    "@storybook/addon-mdx-gfm": "^7.0.6",
     "@storybook/addon-styling": "^1.0.6",
     "@storybook/blocks": "^7.0.6",
     "@storybook/web-components": "^7.0.6",
@@ -51,6 +54,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-lit": "^1.7.2",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.11",
     "eslint-plugin-wc": "^1.4.0",
     "husky": "^8.0.3",

@@ -1,4 +1,7 @@
 :root {
      --layout-border-color: #e6e9ef;
-     --font-family: Poppins, Roboto, Rubik, Noto Kufi Arabic, Noto Sans JP, sans-serif;
+     --link-color: #1f76c2;
+     --list-item-header-font-size: 18px;
+     /* --font-famiy: Poppins-BoldItalic;
+     --title-font-family: Poppins-BoldItalic; */
     }

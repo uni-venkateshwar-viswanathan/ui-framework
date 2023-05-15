@@ -4,7 +4,6 @@ const config = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-mdx-gfm',
     {
       name: '@storybook/addon-styling',
       options: {
@@ -22,6 +21,6 @@ const config = {
   docs: {
     autodocs: 'tag',
     defaultName: 'Documentation',
-  },
+  }
 };
 export default config;

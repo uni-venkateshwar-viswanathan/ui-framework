@@ -1,0 +1,22 @@
+@import "../../styles/typography";
+@import "../../styles/content-spacing";
+@import "../../styles/css-settings";
+
+.uniphore-storybook-component-name {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: $spacing-between-section-items;
+  font-family: $header-primary-font;
+  font-size: $h1-font-size;
+  line-height: 48px;
+  font-weight: 600;
+  letter-spacing: -0.24px;
+  text-align: left;
+  display: grid;
+  border-radius: $border-radius-small;
+  padding: 40px 24px !important;
+  background-image: linear-gradient(rgb(247, 221, 175), rgb(248, 163, 223));
+//   background-image: url('./assets/1.png');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+}

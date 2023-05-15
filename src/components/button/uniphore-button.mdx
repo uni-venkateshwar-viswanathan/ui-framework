@@ -1,0 +1,64 @@
+import { Meta, Controls, Canvas, Title, Story } from "@storybook/blocks";
+import * as ButtonStories from './uniphore-button.stories';
+import './uniphore-button';
+import { 
+    TEXT_BUTTON, 
+    SECONDARY_BUTTON, 
+    PRIMARY_BUTTON, 
+    LARGE_BUTTON,
+    MEDIUM_BUTTON,
+    SMALL_BUTTON
+} from './uniphore-button-consts';
+import { ComponentName } from '../../storybook/components/component-name/component-name';
+
+<Meta of={ButtonStories} />
+
+<ComponentName>Button</ComponentName>
+<br/>
+
+- [Overview](#overview)
+- [Props](#props)
+- [Variants](#variants)
+<br/>
+
+## Overview
+
+Buttons allow users to trigger an action or event with a single click.
+The buttons cn be configured in different sizes and types.
+
+<Canvas of={ButtonStories.PrimaryButton} />
+
+## Props
+<Controls of={ButtonStories.PrimaryButton} />
+
+## Variants
+
+### Button kinds
+
+A button can be one of the types: primary, secondary or text. Accordingly it's style will be displayed.
+
+<Canvas of={ButtonStories.ButtonTypes} />
+
+### Sizes
+
+A button can be in one of the sizes: large, medium or small.
+
+<Canvas of={ButtonStories.ButtonSizes} />
+
+### Button kinds disabled
+
+Each kind button can be disabled. In this state the button does not response to the click event.
+
+<Canvas of={ButtonStories.ButtonKindsDisabled} />
+
+### Button with prefix icon
+
+Each kind button can be with any prefix the user will add. In this example an icon is used as prefix.
+
+<Canvas of={ButtonStories.ButtonWithPrefix} />
+
+### Button with postfix icon
+
+Each kind button can be with any postfix the user will add. In this example an icon is used as postfix.
+
+<Canvas of={ButtonStories.ButtonWithPostfix} />
