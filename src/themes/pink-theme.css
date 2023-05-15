@@ -1,0 +1,20 @@
+@import './colors.css';
+@import './fonts.css';
+
+.pink-theme {
+    --uniphore-primary-button-background-color: var(--strong-pink);
+    --uniphore-primary-button-hover-background-color: var(--soft-pink);
+    --uniphore-primary-button-hover-border-color: var(--soft-pink);
+    --uniphore-secondary-button-color: var(--dark-pink);
+    --uniphore-secondary-button-border: var(--dark-pink);
+    --uniphore-secondary-button-hover-background-color: var(--light-pink);
+    --uniphore-text-button-color: var(--strong-pink);
+    --uniphore-text-button-hover-color: var(--rose-pink);
+    --uniphore-primary-button-disabled-background-color: var(--pale-pink);
+    --uniphore-primary-button-disabled-border-color: var(--pale-pink);
+    --uniphore-secondary-button-disabled-color: var(--pale-pink);
+    --uniphore-secondary-button-disabled-border: var(--pale-pink);
+    --uniphore-text-button-disabled-color: var(--pale-pink);
+
+    --uniphore-font-family: Poppins-Light;
+}
