@@ -1,10 +1,14 @@
 @import './colors.css';
+@import './fonts.css';
 
 .uniphore-default-theme {
     --font-h1: Poppins-Bold;
-    --uniphore-font-family: Poppins;
+    --uniphore-font-family: Poppins-Regular;
+    --font-bold: Poppins-Bold;
+    --font-normal: Poppins-Regular;
 
-    --primary-hover-blue-background-color: #3381DE;
+    --uniphore-primary-button-background-color: var(--active-blue-color);
+    --primary-hover-blue-background-color: var(--active-blue-color);
     --secondary-hover-blue-background-color: #AFD5FF;
     --secondary-active-blue-background-color: #99C0EF;
 }

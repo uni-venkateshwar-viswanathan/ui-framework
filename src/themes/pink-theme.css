@@ -1,5 +1,5 @@
-@import "uniphore-default-theme.css";
 @import './colors.css';
+@import './fonts.css';
 
 .pink-theme {
     --uniphore-primary-button-background-color: var(--strong-pink);
@@ -16,5 +16,5 @@
     --uniphore-secondary-button-disabled-border: var(--pale-pink);
     --uniphore-text-button-disabled-color: var(--pale-pink);
 
-    --uniphore-font-family: Poppins;
+    --uniphore-font-family: Poppins-Light;
 }
