@@ -3,7 +3,7 @@ import uniphoreLogo from './uniphore-logo.png';
 
 
 export default create({
-  base: 'light',
+  base: 'uniphore-default-theme',
 
   brandTitle: 'Uniphore Design System',
   brandUrl: 'https://style.uniphore.com',
