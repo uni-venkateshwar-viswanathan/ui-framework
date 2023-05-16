@@ -71,7 +71,6 @@ export const iconsMap = [
   { className: 'icon-preview', description: 'preview' },
   { className: 'icon-publish', description: 'publish' },
   { className: 'icon-push-pin', description: 'push pin' },
-  { className: 'icon-remove', description: 'remove' },
   {
     className: 'icon-remove-circle-outline',
     description: 'remove circle outline',
