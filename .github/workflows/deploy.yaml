@@ -26,6 +26,7 @@ jobs:
         run: |
           npm install
           npm run build-storybook
+          echo "storybook.uniphore.com" > ./CNAME
 
       - name: Deploy to PAGES 🚀
         uses: JamesIves/github-pages-deploy-action@v4
