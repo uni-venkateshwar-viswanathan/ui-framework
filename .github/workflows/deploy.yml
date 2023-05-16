@@ -22,7 +22,6 @@ jobs:
 
       - name: Install and Build
         run: |
-          pwd
           npm install
           npm run build-storybook
 
