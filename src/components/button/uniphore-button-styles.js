@@ -31,7 +31,7 @@ export const uniphoreButtonStyles = css`
   .uniphore-primary-button:hover:enabled {
     background-color: var(
       --uniphore-primary-button-hover-background-color,
-      var(--primary-hover-blue-background-color)
+      var(--uniphore-primary-hover-color)
     );
     border: 1px solid
       var(--uniphore-primary-button-hover-border-color, var(--true-blue-color));
@@ -40,7 +40,7 @@ export const uniphoreButtonStyles = css`
   .uniphore-primary-button:active:enabled {
     background-color: var(
       --uniphore-primary-button-active-background-color,
-      var(--primary-hover-blue-background-color)
+      var(--uniphore-primary-hover-color)
     );
     border: 1px solid
       var(
@@ -59,20 +59,25 @@ export const uniphoreButtonStyles = css`
       --uniphore-primary-button-disabled-background-color,
       var(--cool-grey-color)
     );
-    border: 1px solid var(--uniphore-primary-button-disabled-border-color, var(--cool-grey-color));
+    border: 1px solid
+      var(
+        --uniphore-primary-button-disabled-border-color,
+        var(--cool-grey-color)
+      );
   }
 
   .uniphore-secondary-button {
     outline: none;
     color: var(--uniphore-secondary-button-color, var(--true-blue-color));
-    border: 1px solid var(--uniphore-secondary-button-border, var(--true-blue-color));
+    border: 1px solid
+      var(--uniphore-secondary-button-border, var(--true-blue-color));
     background-color: var(--uniphore-secondary-button-background-color, white);
   }
 
   .uniphore-secondary-button:hover:enabled {
     background-color: var(
       --uniphore-secondary-button-hover-background-color,
-      var(--secondary-hover-blue-background-color)
+      var(--uniphore-secondary-hover-background-color)
     );
   }
 
@@ -83,9 +88,10 @@ export const uniphoreButtonStyles = css`
     );
     background-color: var(
       --uniphore-secondary-button-active-background-color,
-      var(--secondary-active-blue-background-color)
+      var(--uniphore-secondary-active-background-color)
     );
-    border: 1px solid var(--uniphore-secondary-button-active-border, var(--active-blue-color));
+    border: 1px solid
+      var(--uniphore-secondary-button-active-border, var(--active-blue-color));
   }
 
   .uniphore-secondary-button:disabled {
@@ -93,9 +99,8 @@ export const uniphoreButtonStyles = css`
       --uniphore-secondary-button-disabled-color,
       var(--cool-grey-color)
     );
-    border:
-      1px solid var(--uniphore-secondary-button-disabled-border, var(--cool-grey-color));
- 
+    border: 1px solid
+      var(--uniphore-secondary-button-disabled-border, var(--cool-grey-color));
   }
 
   button.uniphore-text-button {
@@ -110,8 +115,10 @@ export const uniphoreButtonStyles = css`
   }
 
   .uniphore-text-button:hover:enabled {
-    color: 
-      var(--uniphore-text-button-hover-color, var(--primary-hover-blue-background-color));
+    color: var(
+      --uniphore-text-button-hover-color,
+      var(--uniphore-primary-hover-color)
+    );
   }
 
   .uniphore-text-button:active:enabled {

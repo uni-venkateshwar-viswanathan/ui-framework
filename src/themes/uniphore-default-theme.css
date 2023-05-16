@@ -8,7 +8,7 @@
     --font-normal: Poppins-Regular;
 
     --uniphore-primary-button-background-color: var(--active-blue-color);
-    --primary-hover-blue-background-color: var(--active-blue-color);
-    --secondary-hover-blue-background-color: #AFD5FF;
-    --secondary-active-blue-background-color: #99C0EF;
+    --uniphore-primary-hover-color: #3381DE;
+    --uniphore-secondary-hover-background-color: #AFD5FF;
+    --uniphore-secondary-active-background-color: #99C0EF;
 }
