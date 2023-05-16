@@ -2,7 +2,7 @@ import React from 'react';
 import { ColorsDescription } from '../../../components/colors-description/colors-description.jsx';
 
 const colorKeys = [
-  'icy-blue-color',
+  'icy-blue-color-hila',
   'baby-blue-color',
   'uniphore-blue-color',
   'true-blue-color',
