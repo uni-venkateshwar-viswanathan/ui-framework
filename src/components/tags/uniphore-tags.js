@@ -56,7 +56,7 @@ export class UniphoreTags extends LitElement {
         removable=${this.removable}
         background=${item.background}
         color="${item.color}"
-        @on-remove-tag=${this._onRemoveTag}
+        @remove-tag=${this._onRemoveTag}
       ></uniphore-tag>`;
     }
 
