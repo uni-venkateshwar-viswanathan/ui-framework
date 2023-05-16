@@ -2,9 +2,8 @@ import './uniphore-tags';
 import { withActions } from '@storybook/addon-actions/decorator';
 
 export default {
-  title: 'Tags/Tags List',
+  title: 'Design System/Tags/Tags List',
   component: 'uniphore-tags',
-  tags: ['autodocs'],
   parameters: {
     actions: {
       handles: ['remove-tag', 'add-tag'],

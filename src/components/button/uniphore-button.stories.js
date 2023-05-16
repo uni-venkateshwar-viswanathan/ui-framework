@@ -14,7 +14,7 @@ import { horizontalStory } from '../../storybook/decorators/horizontal-story.js'
 import submit from '../../storybook/assets/images/submit.svg';
 
 export default {
-  title: 'Button',
+  title: 'Design System/Button',
   component: 'uniphore-button',
   render: args => html`
     <uniphore-button
@@ -45,6 +45,9 @@ export default {
   parameters: {
     actions: {
       handles: ['uniphore-button-click'],
+    },
+    options: {
+      showPanel: false,
     },
   },
   decorators: [withActions],
