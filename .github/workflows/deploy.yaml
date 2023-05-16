@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout repository
@@ -22,12 +24,16 @@ jobs:
 
       - name: Install and Build
         run: |
-          pwd
           npm install
-          npm run build-storybook -- -o storybook-static
+          npm run build-storybook
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages PEACIERIES
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
+          publish_dir: ./
+
+      - name: Publish to GitHub Pages
+        uses: actions/deploy-pages@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

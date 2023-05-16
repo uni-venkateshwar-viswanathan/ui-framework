@@ -1,0 +1,24 @@
+name: Run tests on web-components
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to trigger the deployment on
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'  # or the version you prefer
+
+      - name: Run Tests
+        run: |
+          npm install
+          npm run test

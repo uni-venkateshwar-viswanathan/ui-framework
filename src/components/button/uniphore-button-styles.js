@@ -21,32 +21,32 @@ export const uniphoreButtonStyles = css`
     outline: none;
     color: var(--uniphore-primary-button-color, white);
     background-color: var(
-      --uniphore-primary-button-color,
+      --uniphore-primary-button-background-color,
       var(--true-blue-color)
     );
     border: 1px solid
-      var(--uniphore-primary-button-color, var(--true-blue-color));
+      var(--uniphore-primary-button-background-color, var(--true-blue-color));
   }
 
   .uniphore-primary-button:hover:enabled {
     background-color: var(
-      --uniphore-primary-button-hover-color,
-      var(--primary-hover-color)
+      --uniphore-primary-button-hover-background-color,
+      var(--primary-hover-blue-background-color)
     );
     border: 1px solid
-      var(
-        --uniphore-primary-button-hover-border-color,
-        var(--primary-hover-color)
-      );
+      var(--uniphore-primary-button-hover-border-color, var(--true-blue-color));
   }
 
   .uniphore-primary-button:active:enabled {
     background-color: var(
-      --uniphore-primary-button-active-color,
-      var(--primary-active-color)
+      --uniphore-primary-button-active-background-color,
+      var(--primary-hover-blue-background-color)
     );
     border: 1px solid
-      var(--uniphore-primary-button-active-color, var(--primary-active-color));
+      var(
+        --uniphore-primary-button-active-background-color,
+        var(--true-blue-color)
+      );
   }
 
   .uniphore-primary-button:disabled {
@@ -56,26 +56,23 @@ export const uniphoreButtonStyles = css`
     );
     opacity: 0.6;
     background-color: var(
-      --uniphore-primary-button-disabled-color,
+      --uniphore-primary-button-disabled-background-color,
       var(--cool-grey-color)
     );
-    border: 1px solid var(--cool-grey-color);
+    border: 1px solid var(--uniphore-primary-button-disabled-border-color, var(--cool-grey-color));
   }
 
   .uniphore-secondary-button {
     outline: none;
     color: var(--uniphore-secondary-button-color, var(--true-blue-color));
-    border: var(
-      --uniphore-secondary-button-border,
-      1px solid var(--true-blue-color)
-    );
-    background-color: var(--uniphore-secondary-button-color, white);
+    border: 1px solid var(--uniphore-secondary-button-border, var(--true-blue-color));
+    background-color: var(--uniphore-secondary-button-background-color, white);
   }
 
   .uniphore-secondary-button:hover:enabled {
     background-color: var(
-      --uniphore-secondary-button-hover-color,
-      var(--secondary-hover-color)
+      --uniphore-secondary-button-hover-background-color,
+      var(--secondary-hover-blue-background-color)
     );
   }
 
@@ -85,13 +82,10 @@ export const uniphoreButtonStyles = css`
       var(--active-blue-color)
     );
     background-color: var(
-      --uniphore-secondary-button-active-color,
-      var(--secondary-active-color)
+      --uniphore-secondary-button-active-background-color,
+      var(--secondary-active-blue-background-color)
     );
-    border: var(
-      --uniphore-secondary-button-active-border,
-      1px solid var(--active-blue-color)
-    );
+    border: 1px solid var(--uniphore-secondary-button-active-border, var(--active-blue-color));
   }
 
   .uniphore-secondary-button:disabled {
@@ -99,10 +93,9 @@ export const uniphoreButtonStyles = css`
       --uniphore-secondary-button-disabled-color,
       var(--cool-grey-color)
     );
-    border: var(
-      --uniphore-secondary-button-disabled-border,
-      1px solid var(--cool-grey-color)
-    );
+    border:
+      1px solid var(--uniphore-secondary-button-disabled-border, var(--cool-grey-color));
+ 
   }
 
   button.uniphore-text-button {
@@ -117,7 +110,8 @@ export const uniphoreButtonStyles = css`
   }
 
   .uniphore-text-button:hover:enabled {
-    color: var(--uniphore-text-button-hover-color, var(--primary-hover-color));
+    color: 
+      var(--uniphore-text-button-hover-color, var(--primary-hover-blue-background-color));
   }
 
   .uniphore-text-button:active:enabled {
