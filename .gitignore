@@ -109,3 +109,5 @@ dist
 /.idea/runConfigurations.xml
 /.idea/vcs.xml
 /ui-framework.iml
+
+storybook-static
