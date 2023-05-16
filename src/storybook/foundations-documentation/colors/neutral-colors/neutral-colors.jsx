@@ -2,7 +2,7 @@ import React from 'react';
 import { ColorsDescription } from '../../../components/colors-description/colors-description.jsx';
 
 const colorKeys = [
-  'white-color-hila',
+  'white-color-hila1',
   'white-grey-color',
   'warm-grey-color',
   'frost-grey-color',
