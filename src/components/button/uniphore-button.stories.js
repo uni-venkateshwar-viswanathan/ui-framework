@@ -10,12 +10,20 @@ import {
   ButtonType,
 } from './uniphore-button-consts.js';
 import { withActions } from '@storybook/addon-actions/decorator';
-import { horizontalStory } from '../../storybook/decorators/horizontal-story.js';
 import submit from '../../storybook/assets/images/submit.svg';
 
 export default {
   title: 'Design System/Button',
   component: 'uniphore-button',
+  parameters: {
+    actions: {
+      handles: ['uniphore-button-click'],
+    },
+  },
+  decorators: [withActions],
+};
+
+export const PrimaryButton = {
   render: args => html`
     <uniphore-button
       id=${args.id}
@@ -42,18 +50,6 @@ export default {
       options: [ButtonType.button, ButtonType.submit, ButtonType.reset],
     },
   },
-  parameters: {
-    actions: {
-      handles: ['uniphore-button-click'],
-    },
-    options: {
-      showPanel: false,
-    },
-  },
-  decorators: [withActions],
-};
-
-export const PrimaryButton = {
   args: {
     id: 'uniphore-button1',
     name: 'uniphore-button',
@@ -63,76 +59,28 @@ export const PrimaryButton = {
   },
 };
 
-export const ButtonTypes = {
-  render: () => html`
-    <uniphore-button type=${PRIMARY_BUTTON} size=${MEDIUM_BUTTON}
-      >Primary</uniphore-button
-    >
-    <uniphore-button type=${SECONDARY_BUTTON} size=${MEDIUM_BUTTON}
-      >Secondary</uniphore-button
-    >
-    <uniphore-button type=${TEXT_BUTTON} size=${MEDIUM_BUTTON}
-      >Text</uniphore-button
-    >
+export const DisabledButton = {
+  render: args => html`
+    <uniphore-button .isDisabled=${args.isDisabled}>
+      ${args.text}
+    </uniphore-button>
   `,
-  decorators: [horizontalStory],
-};
-
-export const ButtonSizes = {
-  render: () => html`
-    <uniphore-button type=${PRIMARY_BUTTON} size=${LARGE_BUTTON}
-      >Large</uniphore-button
-    >
-    <uniphore-button type=${PRIMARY_BUTTON} size=${MEDIUM_BUTTON}
-      >Medium</uniphore-button
-    >
-    <uniphore-button type=${PRIMARY_BUTTON} size=${SMALL_BUTTON}
-      >Small</uniphore-button
-    >
-  `,
-  decorators: [horizontalStory],
-};
-
-export const ButtonKindsDisabled = {
-  render: () => html`
-    <uniphore-button
-      type=${PRIMARY_BUTTON}
-      size=${MEDIUM_BUTTON}
-      .isDisabled=${true}
-      >Primary</uniphore-button
-    >
-    <uniphore-button
-      type=${SECONDARY_BUTTON}
-      size=${MEDIUM_BUTTON}
-      .isDisabled=${true}
-      >Secondary</uniphore-button
-    >
-    <uniphore-button
-      type=${TEXT_BUTTON}
-      size=${MEDIUM_BUTTON}
-      .isDisabled=${true}
-      >Text</uniphore-button
-    >
-  `,
-  decorators: [horizontalStory],
+  args: {
+    text: 'DisabledButton',
+    isDisabled: true,
+  },
 };
 
 export const ButtonWithPrefix = {
-  render: () => html` <uniphore-button
-    type=${PRIMARY_BUTTON}
-    size=${MEDIUM_BUTTON}
-  >
+  render: () => html`<uniphore-button type=${PRIMARY_BUTTON}>
     <img slot="uniphore-button-prefix" src=${submit} />
-    <span>Primary</span>
+    <span>ButtonWithPrefix</span>
   </uniphore-button>`,
 };
 
 export const ButtonWithPostfix = {
-  render: () => html` <uniphore-button
-    type=${PRIMARY_BUTTON}
-    size=${MEDIUM_BUTTON}
-  >
+  render: () => html`<uniphore-button type=${PRIMARY_BUTTON}>
     <img slot="uniphore-button-postfix" src=${submit} />
-    <span>Primary</span>
+    <span>ButtonWithPostfix</span>
   </uniphore-button>`,
 };
