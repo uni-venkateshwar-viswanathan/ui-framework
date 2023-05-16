@@ -37,19 +37,31 @@ The buttons can be configured in different sizes and types.
 
 A button can be one of the types: primary, secondary or text. Accordingly it's style will be displayed.
 
-<Canvas of={ButtonStories.ButtonTypes} />
+<Canvas withSource="none">
+    <uniphore-button type={PRIMARY_BUTTON} size={MEDIUM_BUTTON}>Primary</uniphore-button>
+    <uniphore-button type={SECONDARY_BUTTON} size={MEDIUM_BUTTON}>Secondary</uniphore-button>
+    <uniphore-button type={TEXT_BUTTON} size={MEDIUM_BUTTON}>Text</uniphore-button>
+</Canvas>
 
 ### Sizes
 
 A button can be in one of the sizes: large, medium or small.
 
-<Canvas of={ButtonStories.ButtonSizes} />
+<Canvas withSource="none">
+    <uniphore-button type={PRIMARY_BUTTON} size={LARGE_BUTTON}>Large</uniphore-button>
+    <uniphore-button type={PRIMARY_BUTTON} size={MEDIUM_BUTTON}>Medium</uniphore-button>
+    <uniphore-button type={PRIMARY_BUTTON} size={SMALL_BUTTON}>Small</uniphore-button>
+</Canvas>
 
 ### Button kinds disabled
 
 Each kind button can be disabled. In this state the button does not response to the click event.
 
-<Canvas of={ButtonStories.ButtonKindsDisabled} />
+<Canvas withSource="none">
+    <uniphore-button type={PRIMARY_BUTTON} size={MEDIUM_BUTTON} isDisabled={true}>Primary</uniphore-button>
+    <uniphore-button type={SECONDARY_BUTTON} size={MEDIUM_BUTTON} isDisabled={true}>Secondary</uniphore-button>
+    <uniphore-button type={TEXT_BUTTON} size={MEDIUM_BUTTON} isDisabled={true}>Text</uniphore-button>
+</Canvas>
 
 ### Button with prefix icon
 
