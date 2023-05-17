@@ -27,7 +27,7 @@ jobs:
           npm install
           npm run build-storybook
 
-      - name: Deploy to PAGES 🚀
+      - name: Deploy to Github Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: docs # The folder the action should deploy.
+          folder: storybook-static # The folder the action should deploy.
