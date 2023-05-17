@@ -10,7 +10,16 @@ import {
   ButtonType,
 } from './uniphore-button-consts.js';
 import { withActions } from '@storybook/addon-actions/decorator';
-import submit from '../../storybook/assets/images/submit.svg';
+
+const buttonTypesControl = {
+  control: 'select',
+  options: [PRIMARY_BUTTON, SECONDARY_BUTTON, TEXT_BUTTON],
+};
+
+const buttonSizesControl = {
+  control: 'select',
+  options: [LARGE_BUTTON, MEDIUM_BUTTON, SMALL_BUTTON],
+};
 
 export default {
   title: 'Design System/Button',
@@ -37,14 +46,8 @@ export const PrimaryButton = {
     </uniphore-button>
   `,
   argTypes: {
-    type: {
-      control: 'select',
-      options: [PRIMARY_BUTTON, SECONDARY_BUTTON, TEXT_BUTTON],
-    },
-    size: {
-      control: 'select',
-      options: [LARGE_BUTTON, MEDIUM_BUTTON, SMALL_BUTTON],
-    },
+    type: buttonTypesControl,
+    size: buttonSizesControl,
     nativeType: {
       control: 'select',
       options: [ButtonType.button, ButtonType.submit, ButtonType.reset],
@@ -59,28 +62,44 @@ export const PrimaryButton = {
   },
 };
 
-export const DisabledButton = {
+export const ButtonTypes = {
   render: args => html`
-    <uniphore-button .isDisabled=${args.isDisabled}>
-      ${args.text}
+    <uniphore-button type=${args.type}>
+      <span>Example Button</span>
     </uniphore-button>
   `,
+  argTypes: {
+    type: buttonTypesControl,
+  },
   args: {
-    text: 'DisabledButton',
-    isDisabled: true,
+    type: PRIMARY_BUTTON,
   },
 };
 
-export const ButtonWithPrefix = {
-  render: () => html`<uniphore-button type=${PRIMARY_BUTTON}>
-    <img slot="uniphore-button-prefix" src=${submit} />
-    <span>ButtonWithPrefix</span>
-  </uniphore-button>`,
+export const ButtonSizes = {
+  render: args => html`
+    <uniphore-button size=${args.size}>
+      <span>Example Button</span>
+    </uniphore-button>
+  `,
+  argTypes: {
+    size: buttonSizesControl,
+  },
+  args: {
+    size: LARGE_BUTTON,
+  },
 };
 
-export const ButtonWithPostfix = {
-  render: () => html`<uniphore-button type=${PRIMARY_BUTTON}>
-    <img slot="uniphore-button-postfix" src=${submit} />
-    <span>ButtonWithPostfix</span>
-  </uniphore-button>`,
+export const DisabledButtons = {
+  render: args => html`
+    <uniphore-button type=${args.type} isDisabled=${true}>
+      <span>Disabled Button</span>
+    </uniphore-button>
+  `,
+  argTypes: {
+    type: buttonTypesControl,
+  },
+  args: {
+    type: PRIMARY_BUTTON,
+  },
 };
