@@ -2,7 +2,7 @@ import './uniphore-tag';
 import { withActions } from '@storybook/addon-actions/decorator';
 
 export default {
-  title: 'Tags/Tag',
+  title: 'Design System/Tag',
   component: 'uniphore-tag',
   tags: ['autodocs'],
   argTypes: {
