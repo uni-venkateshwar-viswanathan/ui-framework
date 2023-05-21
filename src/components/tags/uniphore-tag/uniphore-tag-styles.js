@@ -20,9 +20,9 @@ export const uniphoreTagStyles = css`
     padding-left: 6px;
     padding-right: var(--uniphore-tag-padding-right, 6px);
     box-sizing: border-box;
-    
+
     .uniphore-label-in-tag {
-        padding: 2px;
+      padding: 2px;
     }
   }
 
