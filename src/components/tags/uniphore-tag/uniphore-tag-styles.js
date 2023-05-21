@@ -14,7 +14,7 @@ export const uniphoreTagStyles = css`
       --uniphore-tag-background-color,
       rgba(2, 136, 209, 0.15)
     );
-    border: var(--uniphore-tag-border, 1px solid #dcdfe6);
+    border: 1px solid var(--uniphore-tag-border, #dcdfe6);
     border-radius: 4px;
     color: var(--uniphore-tag-color, #606266);
     padding-left: 6px;
