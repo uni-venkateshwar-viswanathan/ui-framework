@@ -26,7 +26,7 @@ export class UniphoreTag extends LitElement {
       <span class="uniphore-tag">
         <uniphore-label
           id=${`uniphore-label${this.id}`}
-          class="uniphore-label"
+          class="uniphore-label-in-tag"
           text=${this.label}
           color="${this.color}"
         ></uniphore-label>
