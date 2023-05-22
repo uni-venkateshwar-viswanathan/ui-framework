@@ -2,6 +2,7 @@
 @import './fonts.css';
 
 .pink-theme {
+    /*button*/
     --uniphore-primary-button-background-color: var(--strong-pink);
     --uniphore-primary-button-hover-background-color: var(--soft-pink);
     --uniphore-primary-button-hover-border-color: var(--soft-pink);
@@ -17,4 +18,7 @@
     --uniphore-text-button-disabled-color: var(--pale-pink);
 
     --uniphore-font-family: Poppins-Light;
+
+    /*tag*/
+    --uniphore-tag-background-color: var(--rose-pink);
 }

@@ -1,0 +1,40 @@
+import { Meta, Controls, Canvas } from "@storybook/blocks";
+import * as TagStories from './uniphore-tag.stories.js';
+import './uniphore-tag.js';
+import { ComponentName } from '../../../storybook/components/component-name/component-name';
+
+
+<Meta of={TagStories} />
+
+<ComponentName>Tag</ComponentName>
+<br/>
+
+- [Overview](#overview)
+- [Props](#props)
+- [Variants](#variants)
+<br/>
+
+
+
+## Overview
+
+Tag is element that represent an input, attribute, or action.
+
+<Canvas of={TagStories.SimpleTag} />
+
+## Props
+<Controls of={TagStories.SimpleTag} />
+
+## Variants
+
+### Simple Tag
+
+<Canvas withSource="none">
+    <uniphore-tag label="I'm a tag"/>
+</Canvas>
+
+### Removable Tag
+
+<Canvas withSource="none">
+    <uniphore-tag label="Remove me!" removable="true"/>
+</Canvas>
