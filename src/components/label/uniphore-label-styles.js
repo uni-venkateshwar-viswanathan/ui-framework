@@ -7,6 +7,7 @@ export const uniphoreLabelStyles = css`
     line-height: var(--uniphore-label-text-line-height, 1.5);
     position: relative;
     white-space: nowrap;
+    font-family: var(--uniphore-font-family, inherit);
   }
 
   .uniphore-label-ellipsis {
