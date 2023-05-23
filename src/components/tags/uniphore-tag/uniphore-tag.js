@@ -2,7 +2,7 @@ import '../../label/uniphore-label.js';
 import { LitElement, html } from 'lit';
 import { dispatchWebComponentEvent } from '../../../common.js';
 import { uniphoreTagStyles } from './uniphore-tag-styles.js';
-import {UniphoreIcon} from "../../icon/uniphore-icon";
+import { UniphoreIcon } from '../../icon/uniphore-icon';
 
 export class UniphoreTag extends LitElement {
   static properties = {
@@ -12,8 +12,8 @@ export class UniphoreTag extends LitElement {
     background: { type: String },
     removable: { type: Boolean },
     removeIconSize: { type: Number, default: 12 },
-    removeIconClassName: { type: String, default: 'close-solid'},
-    removeIconColor: { type: String }
+    removeIconClassName: { type: String, default: 'close-solid' },
+    removeIconColor: { type: String },
   };
 
   static styles = uniphoreTagStyles;
@@ -44,12 +44,13 @@ export class UniphoreTag extends LitElement {
   _getRemovableTag() {
     if (this.removable) {
       return html`<uniphore-icon
-          id="${`remove-tag-${this.id}`}"
-          class="remove-tag-icon"
-          name="${this.removeIconClassName}"
-          color="${this.removeIconColor}"
-          size=${`${this.removeIconSize}px`}
-          @click="${() => this._removeTag()}"/>`;
+        id="${`remove-tag-${this.id}`}"
+        class="remove-tag-icon"
+        name="${this.removeIconClassName}"
+        color="${this.removeIconColor}"
+        size=${`${this.removeIconSize}px`}
+        @click="${() => this._removeTag()}"
+      />`;
     }
   }
 
