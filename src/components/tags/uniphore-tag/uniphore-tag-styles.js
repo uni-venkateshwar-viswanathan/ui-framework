@@ -26,9 +26,9 @@ export const uniphoreTagStyles = css`
       padding-top: 3px;
       padding-right: 5px;
     }
-    
-    .remove-tag-icon{
-        cursor: pointer;
+
+    .remove-tag-icon {
+      cursor: pointer;
     }
   }
 `;
