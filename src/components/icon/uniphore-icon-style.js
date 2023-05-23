@@ -6,7 +6,7 @@ export const uniphoreIconStyle = css`
   }
 
   .uniphore-icon {
-    color: var(--icon-color);
-    font-size: var(--icon-size);
+    color: var(--icon-color, 'white');
+    font-size: var(--icon-size, '12px');
   }
 `;

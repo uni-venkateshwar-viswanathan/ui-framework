@@ -11,8 +11,8 @@ export class UniphoreTag extends LitElement {
     color: { type: String },
     background: { type: String },
     removable: { type: Boolean },
-    removeIconSize: { type: Number, default: 12 },
-    removeIconClassName: { type: String, default: 'close-solid' },
+    removeIconSize: { type: Number },
+    removeIconClassName: { type: String },// list can be found in 'src/assets/icons/icomoon/style.js'
     removeIconColor: { type: String },
   };
 
@@ -22,9 +22,7 @@ export class UniphoreTag extends LitElement {
     super();
     this.id = Math.floor(Math.random() * 10);
     this.removable = false;
-    this.removeIconSize = 13; // same as label font size
-    this.removeIconClassName = 'close-solid'; // list can be found in 'src/assets/icons/icomoon/style.js'
-    this.removeIconColor = '#606266';
+    this.removeIconClassName = 'close-solid';
   }
 
   render() {
@@ -48,7 +46,7 @@ export class UniphoreTag extends LitElement {
         class="remove-tag-icon"
         name="${this.removeIconClassName}"
         color="${this.removeIconColor}"
-        size=${`${this.removeIconSize}px`}
+        size="${this.removeIconSize}"
         @click="${() => this._removeTag()}"
       />`;
     }
