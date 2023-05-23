@@ -6,6 +6,7 @@ import { ICON_DEFAULTS } from './uniphore-icon-consts.js';
 
 export class UniphoreIcon extends LitElement {
   static properties = {
+    id: String,
     name: String,
     color: String,
     size: String,
@@ -30,7 +31,7 @@ export class UniphoreIcon extends LitElement {
   }
 
   render() {
-    return html`<i class=${`uniphore-icon icon-${this.name}`} />`;
+    return html`<i id=${this.id} class=${`uniphore-icon icon-${this.name}`} />`;
   }
 
   connectedCallback() {
