@@ -44,9 +44,7 @@ export class UniphoreButton extends LitElement {
       @click=${this._onButtonClick}
       part="uniphore-button"
     >
-      <slot name="uniphore-button-prefix"></slot>
       <slot></slot>
-      <slot name="uniphore-button-postfix"></slot>
     </button>`;
   }
 

@@ -1,4 +1,4 @@
-import { Meta, Controls, Canvas } from "@storybook/blocks";
+import { Meta, Controls, Canvas, Source } from "@storybook/blocks";
 import * as ButtonStories from './uniphore-button.stories';
 import './uniphore-button';
 import { 
@@ -69,10 +69,12 @@ Each kind button can be disabled. In this state the button does not response to 
 Each kind button can be with any prefix the user will add. In this example an icon is used as prefix.
 
 <Canvas withSource="none">
-<uniphore-button type={PRIMARY_BUTTON}>
-    <img slot="uniphore-button-prefix" src={submit} />
-    <span>ButtonWithPrefix</span>
-  </uniphore-button>
+    <uniphore-button type={PRIMARY_BUTTON}>
+        <div style={{'display': 'flex', 'align-items': 'center'}}>
+            <img src={submit} />
+            <span>Content Button in a Row</span>
+        </div>
+    </uniphore-button>
 </Canvas>
 
 ### Button with postfix icon
@@ -80,8 +82,19 @@ Each kind button can be with any prefix the user will add. In this example an ic
 Each kind button can be with any postfix the user will add. In this example an icon is used as postfix.
 
 <Canvas withSource="none">
-<uniphore-button type={PRIMARY_BUTTON}>
-    <img slot="uniphore-button-postfix" src={submit} />
-    <span>ButtonWithPostfix</span>
-  </uniphore-button>
+    <uniphore-button type={PRIMARY_BUTTON}>
+        <div style={{'display': 'flex', 'flex-direction': 'column', 'align-items': 'center'}}>
+            <img src={submit} height='24px' width='24px'/>
+            <span>Content Button in a Column</span>
+        </div>
+    </uniphore-button>
 </Canvas>
+
+<Source format='dedent' code={`
+    <uniphore-button type="primary">
+        <div style='display':'flex','flex-direction':'column','align-items':'center'>
+            <img src={submit} height='24px' width='24px'/>
+            <span>Content Button in a Column</span>
+        </div>
+    </uniphore-button>
+`} />
