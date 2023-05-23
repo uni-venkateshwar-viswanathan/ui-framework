@@ -7,4 +7,7 @@ export default {
   clearMocks: true,
   // The glob patterns Jest uses to detect test files
   testMatch: ['<rootDir>/**/*.test.js'],
+  moduleNameMapper: {
+    '\\.(css|less)$': 'identity-obj-proxy', // for mocking css files
+  },
 };
