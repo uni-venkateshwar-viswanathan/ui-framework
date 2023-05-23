@@ -2,7 +2,6 @@ import '../../label/uniphore-label.js';
 import { LitElement, html } from 'lit';
 import { dispatchWebComponentEvent } from '../../../common.js';
 import { uniphoreTagStyles } from './uniphore-tag-styles.js';
-import '../../../assets/icons/icomoon/style.css';
 import {UniphoreIcon} from "../../icon/uniphore-icon";
 
 export class UniphoreTag extends LitElement {
