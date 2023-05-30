@@ -7,4 +7,4 @@ export { UniphoreTree } from './tree/uniphore-tree.js';
 export { UniphoreFileUploadElement } from './file-upload/uniphore-file-upload.js';
 export { UniphoreLoader } from './loader/uniphore-loader.js';
 export { UniphoreIcon } from './icon/uniphore-icon.js';
-import '../themes/uniphore-default-theme.css';
+// import '../themes/uniphore-default-theme.css';
