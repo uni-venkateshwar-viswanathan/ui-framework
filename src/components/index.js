@@ -7,4 +7,6 @@ export { UniphoreTree } from './tree/uniphore-tree.js';
 export { UniphoreFileUploadElement } from './file-upload/uniphore-file-upload.js';
 export { UniphoreLoader } from './loader/uniphore-loader.js';
 export { UniphoreIcon } from './icon/uniphore-icon.js';
-import '../themes/UniphoreDefaultTheme.css';
+export { UniphoreCheckbox } from './checkbox/uniphore-checkbox';
+// export { UniphoreRichTextEditor } from './editor/uniphore-rich-text-editor.js';
+// export { UniphoreAutocomplete } from './autocomplete/uniphore-autocomplete.js';

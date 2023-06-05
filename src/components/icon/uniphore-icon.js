@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import '../../assets/icons/icomoon/style.css';
+import '../../styles/icons.css';
 import { uniphoreIconMoonStyle } from '../../assets/icons/icomoon/style.js';
 import { uniphoreIconStyle } from './uniphore-icon-style.js';
 import { ICON_DEFAULTS } from './uniphore-icon-consts.js';

@@ -1,8 +1,8 @@
-import '../../label/uniphore-label.js';
 import { LitElement, html } from 'lit';
 import { dispatchWebComponentEvent } from '../../../common.js';
 import { uniphoreTagStyles } from './uniphore-tag-styles.js';
-import { UniphoreIcon } from '../../icon/uniphore-icon';
+import '../../icon/uniphore-icon';
+import '../../label/uniphore-label';
 
 export class UniphoreTag extends LitElement {
   static properties = {

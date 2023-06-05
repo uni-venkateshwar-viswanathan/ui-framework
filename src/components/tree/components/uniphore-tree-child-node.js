@@ -22,20 +22,20 @@ export class UniphoreTreeChildNode extends LitElement {
             @click="${this._onExtendCollapseArrowClicked}"
           >
             <span
-              class="${
-                this.node.children?.length > 0 || this.node?.numOfChildren > 0
-                  ? 'arrow right'
-                  : ''
-              }"
+              class="${this.node.children?.length > 0 ||
+              this.node?.numOfChildren > 0
+                ? 'arrow right'
+                : ''}"
             ></span>
           </div>
           <div
             class="uniphore-tree-child-node-label-text"
             @click="${this._onTreeChildNodeClick}"
           >
-            <uniphore-label text="${
-              this.node.label
-            }" .showEllipsis="${false}></uniphore-label>
+            <uniphore-label
+              text="${this.node.label}"
+              .showEllipsis="${false}"
+            ></uniphore-label>
           </div>
         </div>
         ${this._addParentNode(this.node)}

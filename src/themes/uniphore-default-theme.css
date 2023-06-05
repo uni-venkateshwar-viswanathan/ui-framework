@@ -1,7 +1,5 @@
-@import './colors.css';
-@import './fonts.css';
-
-.uniphore-default-theme {
+/*.uniphore-default-theme {*/
+:root {
     --font-h1: Poppins-Bold;
     --uniphore-font-family: Poppins-Regular;
     --font-bold: Poppins-Bold;
