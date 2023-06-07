@@ -10,9 +10,7 @@
         "eslint:recommended",
         "plugin:wc/recommended",
         "plugin:lit/recommended",
-        "plugin:prettier/recommended",
-        "plugin:storybook/recommended",
-        "plugin:react/recommended"
+        "plugin:prettier/recommended"
     ],
     "parser": "@babel/eslint-parser", //A wrapper around the Babel parser that makes it compatible with ESLint
     "parserOptions": {

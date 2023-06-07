@@ -1,7 +1,4 @@
-@import './colors.css';
-@import './fonts.css';
-
-.pink-theme {
+:root {
     --uniphore-font-family: Poppins-Light;
 
     /*button*/

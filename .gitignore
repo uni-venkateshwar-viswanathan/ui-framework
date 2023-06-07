@@ -110,6 +110,4 @@ dist
 /.idea/vcs.xml
 /ui-framework.iml
 
-storybook-static
-
 build

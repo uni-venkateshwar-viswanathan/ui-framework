@@ -9,5 +9,5 @@ export default {
   testMatch: ['<rootDir>/**/*.test.js'],
   moduleNameMapper: {
     '\\.(css|less)$': 'identity-obj-proxy', // for mocking css files
-  },
+  }
 };

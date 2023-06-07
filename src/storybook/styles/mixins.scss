@@ -1,8 +1,0 @@
-@import "./theme-mixins";
-@import "./css-settings";
-
-@mixin frame() {
-  border: var(--layout-border-color) 1px solid;
-  border-radius: $border-radius-medium;
-  @include theme-prop(border-color, layout-border-color);
-}
