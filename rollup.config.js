@@ -9,7 +9,7 @@ export default {
         format: 'esm',
     },
     plugins: [
-        css({output: 'uniphore.css'}),
+        css({output: 'uniphore-styles.css'}),
         babel({exclude: 'node_modules/**' }),
         copy({
             patterns: 'assets/**/*',
