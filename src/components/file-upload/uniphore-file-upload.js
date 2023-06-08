@@ -46,7 +46,10 @@ export class UniphoreFileUploadElement extends LitElement {
   _getLabelTemplate() {
     switch (this.type) {
       case 'button':
-        return html`<uniphore-button text=${this.label} />`;
+        return html`<uniphore-button>
+          <span>${this.label}</span>
+        </uniphore-button>`;
+
       case 'label':
         return nothing;
       case 'icon':
