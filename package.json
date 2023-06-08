@@ -1,7 +1,7 @@
 {
   "name": "@uniphore/ui-framework",
   "repository": "https://github.com/uniphore/ui-framework",
-  "version": "2.0.39",
+  "version": "1.0.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
     "directory": "build"
