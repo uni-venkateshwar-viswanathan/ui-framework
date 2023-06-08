@@ -3,14 +3,9 @@
   "repository": "https://github.com/uniphore/ui-framework",
   "version": "1.0.0",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "directory": "build"
+    "registry": "https://npm.pkg.github.com"
   },
-  "main": "build/index.js",
-  "exports": {
-    ".": "./build/index.js",
-    "./uniphore.css": "./build/uniphore.css"
-  },
+  "main": "build",
   "files": [
     "build/"
   ],
