@@ -5,7 +5,7 @@ export const uniphoreButtonStyles = css`
     display: flex;
     align-items: center;
     border-radius: 4px;
-    font-family: var(--uniphore-font-family, var(--poppins-semi-bold));
+    font-family: var(--uniphore-font-family);
     font-weight: var(--button-text-weight, 500);
   }
 
@@ -20,109 +20,83 @@ export const uniphoreButtonStyles = css`
   .uniphore-primary-button {
     outline: none;
     color: var(--uniphore-primary-button-color, white);
-    background-color: var(
-      --uniphore-primary-button-background-color,
-      var(--true-blue-color)
-    );
-    border: 1px solid
-      var(--uniphore-primary-button-background-color, var(--true-blue-color));
+    background-color: var(--uniphore-primary-button-background-color, #0062d6);
+    border: 1px solid var(--uniphore-primary-button-background-color, #0062d6);
   }
 
   .uniphore-primary-button:hover:enabled {
     background-color: var(
       --uniphore-primary-button-hover-background-color,
-      var(--uniphore-primary-hover-color)
+      #3381de
     );
-    border: 1px solid
-      var(--uniphore-primary-button-hover-border-color, var(--true-blue-color));
+    border: 1px solid var(--uniphore-primary-button-hover-border-color, #3381de);
   }
 
   .uniphore-primary-button:active:enabled {
     background-color: var(
       --uniphore-primary-button-active-background-color,
-      var(--uniphore-primary-hover-color)
+      #004eab
     );
     border: 1px solid
-      var(
-        --uniphore-primary-button-active-background-color,
-        var(--true-blue-color)
-      );
+      var(--uniphore-primary-button-active-background-color, #004eab);
   }
 
   .uniphore-primary-button:disabled {
-    color: var(
-      --uniphore-primary-button-disabled-color,
-      var(--border-grey-color)
-    );
+    color: var(--uniphore-primary-button-disabled-color, #8b8ba0);
     opacity: 0.6;
     background-color: var(
       --uniphore-primary-button-disabled-background-color,
-      var(--cool-grey-color)
+      #d7dae3
     );
     border: 1px solid
-      var(
-        --uniphore-primary-button-disabled-border-color,
-        var(--cool-grey-color)
-      );
+      var(--uniphore-primary-button-disabled-border-color, #d7dae3);
   }
 
   .uniphore-secondary-button {
     outline: none;
-    color: var(--uniphore-secondary-button-color, var(--true-blue-color));
-    border: 1px solid
-      var(--uniphore-secondary-button-border, var(--true-blue-color));
+    color: var(--uniphore-secondary-button-color, #0062d6);
+    border: 1px solid var(--uniphore-secondary-button-border, #0062d6);
     background-color: var(--uniphore-secondary-button-background-color, white);
   }
 
   .uniphore-secondary-button:hover:enabled {
     background-color: var(
       --uniphore-secondary-button-hover-background-color,
-      var(--uniphore-secondary-hover-background-color)
+      #afd5ff
     );
   }
 
   .uniphore-secondary-button:active:enabled {
-    color: var(
-      --uniphore-secondary-button-active-color,
-      var(--active-blue-color)
-    );
+    color: var(--uniphore-secondary-button-active-color, #004eab);
     background-color: var(
       --uniphore-secondary-button-active-background-color,
-      var(--uniphore-secondary-active-background-color)
+      #99c0ef
     );
-    border: 1px solid
-      var(--uniphore-secondary-button-active-border, var(--active-blue-color));
+    border: 1px solid var(--uniphore-secondary-button-active-border, 004EAB);
   }
 
   .uniphore-secondary-button:disabled {
-    color: var(
-      --uniphore-secondary-button-disabled-color,
-      var(--cool-grey-color)
-    );
-    border: 1px solid
-      var(--uniphore-secondary-button-disabled-border, var(--cool-grey-color));
+    color: var(--uniphore-secondary-button-disabled-color, #8b8ba0);
+    border: 1px solid var(--uniphore-secondary-button-disabled-border, #8b8ba0);
   }
 
   button.uniphore-text-button {
     outline: none;
-    color: var(--uniphore-text-button-color, var(--true-blue-color));
+    color: var(--uniphore-text-button-color, #0062d6);
     border: var(--uniphore-text-button-border, none);
     background: none;
   }
 
   .uniphore-text-button:disabled {
-    color: var(--uniphore-text-button-disabled-color, var(--cool-grey-color));
+    color: var(--uniphore-text-button-disabled-color, #8b8ba0);
   }
 
   .uniphore-text-button:hover:enabled {
-    color: var(
-      --uniphore-text-button-hover-color,
-      var(--uniphore-primary-hover-color)
-    );
+    color: var(--uniphore-text-button-hover-color, #3381de);
   }
 
   .uniphore-text-button:active:enabled {
-    color: var(--uniphore-text-button-active-color, var(--active-blue-color));
+    color: var(--uniphore-text-button-active-color, #004eab);
   }
 
   .uniphore-large-button {
