@@ -57,7 +57,7 @@ export class UniphoreLabel extends LitElement {
     }
   }
 
-  _setTagColor(color) {
+  _setLabelColor(color) {
     if (color) {
       this.style.setProperty('--uniphore-label-text-color', color);
     }
@@ -69,7 +69,7 @@ export class UniphoreLabel extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    this._setTagColor(this.color);
+    this._setLabelColor(this.color);
   }
 
   disconnectedCallback() {
