@@ -4,10 +4,10 @@ import {
   CARET_POSITION,
   CARET_ICON,
   CARET_PROPS,
-  UNIPHORE_COLLAPSE_CLICK
+  UNIPHORE_COLLAPSE_CLICK,
 } from './uniphore-collapse-consts';
 import '../icon/uniphore-icon.js';
-import {dispatchWebComponentEvent} from "../../common.js";
+import { dispatchWebComponentEvent } from '../../common.js';
 
 export class UniphoreCollapse extends LitElement {
   static properties = {
@@ -22,7 +22,7 @@ export class UniphoreCollapse extends LitElement {
     caretIconWhenOpened: String,
     caretColor: String,
     caretSize: String,
-    identifier: String
+    identifier: String,
   };
 
   static styles = uniphoreCollapseStyles;
@@ -75,7 +75,10 @@ export class UniphoreCollapse extends LitElement {
     if (!this.isLocked) {
       this.isCollapsed = !this.isCollapsed;
       this._handleContentHeight(event.currentTarget.nextElementSibling);
-      dispatchWebComponentEvent(this, UNIPHORE_COLLAPSE_CLICK, {identifier:this.identifier, isCollapsed: this.isCollapsed});
+      dispatchWebComponentEvent(this, UNIPHORE_COLLAPSE_CLICK, {
+        identifier: this.identifier,
+        isCollapsed: this.isCollapsed,
+      });
     }
   }
 
