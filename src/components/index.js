@@ -1,5 +1,5 @@
 export { UniphoreButton } from './button/uniphore-button.js';
-export { UniphoreDropdown } from './dropdown/uniphore-dropdown.js';
+export { UniphoreSelect } from './select/uniphore-select.js';
 export { UniphoreLabel } from './label/uniphore-label.js';
 export { UniphoreTags } from './tags/uniphore-tags.js';
 export { UniphoreCollapse } from './collapse/uniphore-collapse.js';
