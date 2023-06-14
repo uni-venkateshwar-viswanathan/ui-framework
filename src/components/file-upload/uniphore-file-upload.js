@@ -10,6 +10,7 @@ export class UniphoreFileUploadElement extends LitElement {
     type: { type: String },
     accept: { type: String },
     icon: { type: String },
+    isDisabled: { type: Boolean },
   };
 
   static styles = uniphoreFileUploadStyles;
@@ -20,6 +21,8 @@ export class UniphoreFileUploadElement extends LitElement {
     this.type = 'button';
     this.label = 'Upload';
     this.multiple = false;
+    this.isDisabled = false;
+
     this.addEventListener('uniphore-button-click', this._onButtonClicked);
   }
 
@@ -52,18 +55,23 @@ export class UniphoreFileUploadElement extends LitElement {
 
       case 'label':
         return nothing;
+
       case 'icon':
         return html`<img
           src=${this.icon}
           alt="${'upload file'}"
           class="file-upload-icon"
         />`;
+
       default:
         return nothing;
     }
   }
-
   _getInputTemplate() {
+    if (this.isDisabled) {
+      return html`<input accept=${this.accept} type="file" hidden disabled />`;
+    }
+
     if (this.multiple) {
       return html`<input accept=${this.accept} multiple type="file" hidden />`;
     }
@@ -73,7 +81,10 @@ export class UniphoreFileUploadElement extends LitElement {
 
   render() {
     return html`
-      <div id="uniphoreFileUpload" class="uniphore-file-upload">
+      <div
+        id="uniphoreFileUpload"
+        class="uniphore-file-upload ${this.isDisabled ? 'disabled-upload' : ''}"
+      >
         <label id="fileUploadLabel" class="uniphore-file-upload-label">
           ${this._getInputTemplate()} ${this._getLabelTemplate()}
         </label>

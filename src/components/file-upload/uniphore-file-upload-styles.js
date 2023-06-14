@@ -15,4 +15,9 @@ export const uniphoreFileUploadStyles = css`
   .file-upload-icon:hover {
     cursor: pointer;
   }
+
+  .disabled-upload {
+    pointer-events: none;
+    opacity: 0.5;
+  }
 `;
