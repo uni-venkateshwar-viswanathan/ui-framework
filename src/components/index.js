@@ -8,5 +8,6 @@ export { UniphoreFileUploadElement } from './file-upload/uniphore-file-upload.js
 export { UniphoreLoader } from './loader/uniphore-loader.js';
 export { UniphoreIcon } from './icon/uniphore-icon.js';
 export { UniphoreCheckbox } from './checkbox/uniphore-checkbox';
+export { UniphorePicklist } from './picklist/uniphore-picklist.js';
 // export { UniphoreRichTextEditor } from './editor/uniphore-rich-text-editor.js';
 // export { UniphoreAutocomplete } from './autocomplete/uniphore-autocomplete.js';
