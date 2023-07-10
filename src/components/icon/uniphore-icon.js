@@ -7,9 +7,9 @@ import { ICON_DEFAULTS } from './uniphore-icon-consts.js';
 export class UniphoreIcon extends LitElement {
   static properties = {
     id: String,
-    name: {type: String, default: ICON_DEFAULTS.name},
-    color: {type: String, default: ICON_DEFAULTS.color},
-    size: { type: String, default: ICON_DEFAULTS.size}
+    name: { type: String, default: ICON_DEFAULTS.name },
+    color: { type: String, default: ICON_DEFAULTS.color },
+    size: { type: String, default: ICON_DEFAULTS.size },
   };
 
   static styles = [uniphoreIconMoonStyle, uniphoreIconStyle];

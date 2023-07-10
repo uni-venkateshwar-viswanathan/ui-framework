@@ -70,7 +70,7 @@ export class UniphoreCheckbox extends LitElement {
     return html`
       <div class="uniphore-checkbox">
         <label class="uniphore-checkbox-label">
-          ${this._renderChecbkoxInput()}
+          ${this._renderCheckboxInput()}
           <div class="uniphore-checkbox-label-cb">
             ${this._renderCheckboxIcon()}
           </div>
@@ -99,7 +99,7 @@ export class UniphoreCheckbox extends LitElement {
       : null;
   }
 
-  _renderChecbkoxInput() {
+  _renderCheckboxInput() {
     if (this.disabled) {
       if (this.checked) {
         return html`<input

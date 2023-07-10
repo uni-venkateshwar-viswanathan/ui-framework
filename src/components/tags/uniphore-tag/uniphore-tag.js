@@ -12,7 +12,7 @@ export class UniphoreTag extends LitElement {
     background: { type: String },
     removable: { type: Boolean },
     removeIconSize: { type: Number },
-    removeIconClassName: { type: String },// list can be found in 'src/assets/icons/icomoon/style.js'
+    removeIconClassName: { type: String }, // list can be found in 'src/assets/icons/icomoon/style.js'
     removeIconColor: { type: String },
   };
 
