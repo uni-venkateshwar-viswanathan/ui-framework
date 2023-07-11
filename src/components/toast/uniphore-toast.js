@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { ToastService } from './toastService';
 
 export class UniphoreToast extends LitElement {
   static properties = {
@@ -47,12 +48,21 @@ export class UniphoreToast extends LitElement {
     super.connectedCallback();
     // add default classes to host
     const hostClassList = this.shadowRoot?.host?.classList;
-    hostClassList.add('bottom', 'left');
+    if (!hostClassList.contains('top')) {
+      hostClassList.add('bottom');
+    } else if (!hostClassList.contains('right')) {
+      hostClassList.add('left');
+    }
+
+    // setup toastService
+    if (!window.ToastService) {
+      window.ToastService = new ToastService();
+    }
   }
 
   render() {
     return html`
-      ${this.toasts.map(
+      ${this.toasts?.map(
         toast => html`
           <div class="toast">
             <span class="message">${toast.message}</span>
