@@ -12,6 +12,8 @@ export { UniphoreCheckbox } from './checkbox/uniphore-checkbox';
 export { UniphoreToast } from './toast/uniphore-toast.js';
 export { UniphoreSnackbar } from './snackbar/uniphore-snackbar.js';
 export { UniphoreInput } from './text-input/uniphore-input.js';
+export { UniphoreTextarea } from './textarea/uniphore-textarea.js';
+export { UniphoreCard } from './card/uniphore-card.js';
 
 // export { UniphoreRichTextEditor } from './editor/uniphore-rich-text-editor.js';
 // export { UniphoreAutocomplete } from './autocomplete/uniphore-autocomplete.js';

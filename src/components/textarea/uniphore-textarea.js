@@ -1,15 +1,14 @@
 import { LitElement, html, css, nothing } from 'lit';
-import { dispatchWebComponentEvent } from '../../common.js';
 
-export class UniphoreInput extends LitElement {
+export class UniphoreTextarea extends LitElement {
   static properties = {
     label: { type: String },
     value: { type: String },
-    placeholder: { type: String },
+    disabled: { type: Boolean },
+    invalid: { type: Boolean, reflect: true },
     helpText: { type: String },
     error: { type: String },
-    invalid: { type: Boolean, reflect: true },
-    disabled: { type: Boolean },
+    placeholder: { type: String },
   };
 
   static styles = css`
@@ -17,7 +16,6 @@ export class UniphoreInput extends LitElement {
       display: flex;
       flex-direction: column-reverse;
       width: 313px;
-      position: relative;
       margin: 28px 24px;
     }
 
@@ -28,12 +26,13 @@ export class UniphoreInput extends LitElement {
       margin-bottom: 4px;
     }
 
-    input {
+    textarea {
       padding: 8px;
       padding-right: 22px;
       border: 1px solid #abaebc;
       border-radius: 4px;
       outline: 0;
+      resize: vertical;
       font-size: 1rem;
     }
 
@@ -44,15 +43,15 @@ export class UniphoreInput extends LitElement {
       margin: 8px 0;
     }
 
-    input:active,
-    input:focus,
-    input:focus-visible {
+    textarea:active,
+    textarea:focus,
+    textarea:focus-visible {
       border-color: #0062d6;
     }
 
-    input:active + label,
-    input:focus + label,
-    input:focus-visible + label {
+    textarea:active + label,
+    textarea:focus + label,
+    textarea:focus-visible + label {
       color: #0062d6;
     }
 
@@ -60,7 +59,7 @@ export class UniphoreInput extends LitElement {
       color: #a00;
     }
 
-    input .placeholder {
+    textarea .placeholder {
       color: var(--sonic-gray, #6d6f79);
     }
 
@@ -68,7 +67,7 @@ export class UniphoreInput extends LitElement {
       color: #a00;
     }
 
-    :host([invalid]) input {
+    :host([invalid]) textarea {
       border-color: #a00;
     }
 
@@ -76,18 +75,10 @@ export class UniphoreInput extends LitElement {
       color: var(--cool-gray, #8b8ba0);
     }
 
-    :host([disabled]) input {
+    :host([disabled]) textarea {
       border: 1px solid var(--cool-gray, #8b8ba0);
       background: var(--frost-gray, #e9ecf4);
       color: var(--cool-gray, #8b8ba0) !important;
-    }
-
-    uniphore-icon.close {
-      position: absolute;
-      --icon-size: 12px;
-      right: 8px;
-      bottom: 12px;
-      cursor: pointer;
     }
   `;
 
@@ -106,36 +97,19 @@ export class UniphoreInput extends LitElement {
       ${this.helpText || this.error
         ? html`<div class="help-text">${this.error || this.helpText}</div>`
         : nothing}
-      <input
-        type="text"
-        id="input-element"
+      <textarea
+        .placehoder=${this.placeholder || ''}
         .value=${this.value}
-        .placeholder=${this.placeholder || ''}
-        aria-label="${this.placeholder}"
-        .disabled=${this.disabled}
+        ?disabled=${this.disabled}
         @input=${this.handleInput}
-      />
-      <label for="input-element">${this.label}</label>
-      ${this.value && !this.disabled
-        ? html`<uniphore-icon
-            class="close"
-            name="close"
-            @click="${this.handleClear}"
-          ></uniphore-icon>`
-        : nothing}
+      ></textarea>
+      <label>${this.label}</label>
     `;
   }
 
   handleInput(event) {
     this.value = event.target.value;
   }
-
-  handleClear() {
-    this.value = '';
-    dispatchWebComponentEvent(this, 'input', {
-      value: '',
-    });
-  }
 }
 
-customElements.define('uniphore-input', UniphoreInput);
+customElements.define('uniphore-textarea', UniphoreTextarea);
