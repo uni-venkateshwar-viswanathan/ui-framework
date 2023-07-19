@@ -1,7 +1,7 @@
 {
-  "name": "@uniphore/ui-framework",
-  "repository": "https://github.com/uniphore/ui-framework",
-  "version": "1.0.0",
+  "name": "@uni-venkateshwar-viswanathan/ui-framework",
+  "repository": "https://github.com/uni-venkateshwar-viswanathan/ui-framework",
+  "version": "1.0.1",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
@@ -11,7 +11,7 @@
   ],
   "description": "",
   "keywords": [],
-  "author": "Uniphore",
+  "author": "uni-venkateshwar-viswanathan",
   "type": "module",
   "license": "ISC",
   "scripts": {

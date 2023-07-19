@@ -21,6 +21,7 @@ export class UniphoreCard extends LitElement {
     .spacer {
       padding: 1rem;
     }
+
     :host(:active),
     :host(:focus) {
       border-color: var(--true-blue, #0062d6);
