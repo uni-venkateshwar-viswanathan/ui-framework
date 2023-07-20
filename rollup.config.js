@@ -17,7 +17,7 @@ export default {
     css({ output: 'uniphore-styles.css' }),
     babel({ exclude: 'node_modules/**' }),
     copy({
-      patterns: 'assets/**/*',
+      patterns: 'public_assets/**/*',
       rootDir: 'src',
     }),
     dev &&
